@@ -1,0 +1,343 @@
+---
+install:
+  brew:
+    taps:
+      - "batchcorp/public"
+      - "homebrew/cask-fonts"
+    formulas:
+      - "act"
+      - "aircrack-ng"
+      - "asciinema"
+      - "automake"
+      - "autozimu/homebrew-formulas/unison-fsmonitor"
+      - "awscli"
+      - "bash-completion"
+      - "bash"
+      - "bat"
+      - "bitwarden-cli"
+      - "composer"
+      - "doctl"
+      - "exa"
+      - "ffmpeg"
+      - "findutils"
+      - "fswatch"
+      - "fzf"
+      - "gdrive"
+      - "gist"
+      - "git-delta"
+      - "git-lfs"
+      - "git"
+      - "gmp"
+      - "gnu-sed"
+      - "go"
+      - "golangci-lint"
+      - "hr"
+      - "htmlq"
+      - "htop"
+      - "httpie"
+      - "imagemagick"
+      - "jq"
+      - "links"
+      - "lynx"
+      - "mas"
+      - "moreutils"
+      - "neovim"
+      - "ngrok"
+      - "nmap"
+      - "node"
+      - "nvm"
+      - "openssh"
+      - "php-code-sniffer"
+      - "php-cs-fixer"
+      - "php"
+      - "phpmd"
+      - "phpstan"
+      - "plumber"
+      - "pyenv"
+      - "rclone"
+      - "ripgrep"
+      - "rsync"
+      - "screen"
+      - "speedtest-cli"
+      - "starship"
+      - "taskwarrior-tui"
+      - "terraform"
+      - "tldr"
+      - "tmux"
+      - "tree"
+      - "unison"
+      - "vim"
+      - "watch"
+      - "watchexec"
+      - "watchman"
+      - "wget"
+      - "yarn"
+      - "you-get"
+      - "zplug"
+      - "zsh-completions"
+      - "zsh"
+    casks: 
+      - "4k-video-downloader"
+      - "alfred"
+      - "appcleaner"
+      - "authy"
+      - "discord"
+      - "docker"
+      - "dropbox"
+      - "firefox"
+      - "font-3270-nerd-font"
+      - "font-agave-nerd-font"
+      - "font-anonymice-nerd-font"
+      - "font-arimo-nerd-font"
+      - "font-aurulent-sans-mono-nerd-font"
+      - "font-bigblue-terminal-nerd-font"
+      - "font-bitstream-vera-sans-mono-nerd-font"
+      - "font-blex-mono-nerd-font"
+      - "font-caskaydia-cove-nerd-font"
+      - "font-code-new-roman-nerd-font"
+      - "font-cousine-nerd-font"
+      - "font-daddy-time-mono-nerd-font"
+      - "font-dejavu-sans-mono-nerd-font"
+      - "font-droid-sans-mono-nerd-font"
+      - "font-fantasque-sans-mono-nerd-font"
+      - "font-fira-code-nerd-font"
+      - "font-fira-mono-nerd-font"
+      - "font-go-mono-nerd-font"
+      - "font-gohufont-nerd-font"
+      - "font-hack-nerd-font"
+      - "font-hasklug-nerd-font"
+      - "font-heavy-data-nerd-font"
+      - "font-hurmit-nerd-font"
+      - "font-im-writing-nerd-font"
+      - "font-inconsolata-go-nerd-font"
+      - "font-inconsolata-lgc-nerd-font"
+      - "font-inconsolata-nerd-font"
+      - "font-iosevka-nerd-font"
+      - "font-jetbrains-mono-nerd-font"
+      - "font-lekton-nerd-font"
+      - "font-liberation-nerd-font"
+      - "font-meslo-lg-nerd-font"
+      - "font-monofur-nerd-font"
+      - "font-monoid-nerd-font"
+      - "font-mononoki-nerd-font"
+      - "font-mplus-nerd-font"
+      - "font-noto-nerd-font"
+      - "font-open-dyslexic-nerd-font"
+      - "font-overpass-nerd-font"
+      - "font-profont-nerd-font"
+      - "font-proggy-clean-tt-nerd-font"
+      - "font-roboto-mono-nerd-font"
+      - "font-sauce-code-pro-nerd-font"
+      - "font-shure-tech-mono-nerd-font"
+      - "font-space-mono-nerd-font"
+      - "font-terminess-ttf-nerd-font"
+      - "font-tinos-nerd-font"
+      - "font-ubuntu-mono-nerd-font"
+      - "font-ubuntu-nerd-font"
+      - "font-victor-mono-nerd-font"
+      - "google-chrome"
+      - "hiddenbar"
+      - "hpedrorodrigues/tools/dockutil" # temporary solution https://github.com/kcrawford/dockutil/issues/127
+      - "imageoptim"
+      - "iterm2"
+      - "jetbrains-toolbox"
+      - "kindle"
+      - "macs-fan-control"
+      - "monitorcontrol"
+      - "moonlight"
+      - "nordvpn"
+      - "numi"
+      - "obs"
+      - "oracle-jdk"
+      - "parsec"
+      - "pocket-casts"
+      - "postman"
+      - "sequel-ace"
+      - "shottr"
+      - "skype"
+      - "slack"
+      - "steam"
+      - "tableplus"
+      - "taskwarrior-pomodoro"
+      - "teamviewer"
+      - "visual-studio-code"
+      - "vlc"
+      - "vnc-viewer"
+      - "whatsapp"
+      - "zoom"
+    customCommands: 
+      - "brew install --HEAD universal-ctags/universal-ctags/universal-ctags"
+      - "brew link --force git"
+      - "brew link --overwrite awscli"
+      - "brew link --overwrite go"
+      - "brew link --overwrite python@3.10"
+      - "echo \"y\" | $(brew --prefix)/opt/fzf/install"
+      - "git lfs install"
+      - "mkdir ~/.nvm"
+  pyenv:
+    global: 
+      version: 3.11.1
+      pip:
+        - "neovim"
+        - "pynvim"
+    versions:
+      - 2.7.18
+      - 3.11.1
+  gem:
+    rubygems:
+      - "neovim"
+  npm:
+    global:
+      packages:
+        - "neovim"
+        - "serverless"
+  mas:
+    apps:    
+      - id: "1018301773"
+        name: "AdBlock Pro" 
+      - id: "824171161" 
+        name: "Affinity Designer" 
+      - id: "824183456" 
+        name: "Affinity Photo" 
+      - id: "918858936" 
+        name: "Airmail" 
+      - id: "1352778147"
+        name: "Bitwarden" 
+      - id: "935235287" 
+        name: "Encrypto" 
+      - id: "975937182" 
+        name: "Fantastical 2" 
+      - id: "412448059" 
+        name: "ForkLift" 
+      - id: "553245401" 
+        name: "Friendly Streaming" 
+      - id: "682658836" 
+        name: "GarageBand" 
+      - id: "668208984" 
+        name: "Giphy Capture" 
+      - id: "975890633" 
+        name: "HotKey" 
+      - id: "775737590" 
+        name: "iA Writer" 
+      - id: "408981434" 
+        name: "iMovie" 
+      - id: "409183694" 
+        name: "Keynote" 
+      - id: "441258766" 
+        name: "Magnet" 
+      - id: "1575588022"
+        name: "MenubarX" 
+      - id: "1295203466"
+        name: "Microsoft Remote Desktop" 
+      - id: "409203825" 
+        name: "Numbers" 
+      - id: "409201541" 
+        name: "Pages" 
+      - id: "568494494" 
+        name: "Pocket" 
+      - id: "880001334" 
+        name: "Reeder" 
+      - id: "1153157709"
+        name: "Speedtest" 
+      - id: "1278508951"
+        name: "Trello" 
+      - id: "1607635845"
+        name: "Velja"
+      - id: "533696630" 
+        name: "Webcam Settings" 
+config:
+  mkdir: 
+    - ~/.config/nvim/
+  symbolic_links:  
+    - from: 
+        relative_path: ".curlrc"
+      to: 
+        absolute_path: "~/.curlrc"
+
+    - from: 
+        relative_path: ".editorconfig"
+      to: 
+        absolute_path: "~/.editorconfig"
+
+    - from: 
+        relative_path: ".gitconfig"
+      to: 
+        absolute_path: "~/.gitconfig"
+
+    - from: 
+        relative_path: ".gitignore_global"
+      to: 
+        absolute_path: "~/.gitignore_global"
+
+    - from: 
+        relative_path: ".netrc"
+      to: 
+        absolute_path: "~/.netrc"
+
+    - from: 
+        relative_path: ".vimrc"
+      to: 
+        absolute_path: "~/.config/nvim/init.vim"
+
+    - from: 
+        relative_path: ".vimrc"
+      to: 
+        absolute_path: "~/.vimrc"
+
+    - from: 
+        relative_path: ".zsh_history"
+      to: 
+        absolute_path: "~/.zsh_history"
+
+    - from: 
+        relative_path: ".zshrc"
+      to: 
+        absolute_path: "~/.zshrc"
+
+    - from: 
+        relative_path: "starship.toml"
+      to: 
+        absolute_path: "~/.config/starship.toml"
+  dockutil:
+    _before:
+      reset: true
+      removeAll: true
+    add:
+      - app: "/System/Applications/Launchpad.app"   
+        after: "Finder"
+
+      - app: "/Applications/Safari.app"             
+        after: "Finder"
+
+      - app: "/Applications/Google Chrome.app"      
+        after: "Finder"
+
+      - app: "/System/Applications/Reminders.app"   
+        after: "Finder"
+
+      - app: "/System/Applications/Music.app"       
+        after: "Finder"
+
+      - app: "/System/Applications/App Store.app"   
+        after: "Finder"
+
+      - app: "/Applications/iTerm.app"              
+        after: "Finder"
+
+      - app: "/Applications/Visual Studio Code.app" 
+        after: "Finder"
+
+      - app: "/Applications/iA Writer.app"          
+        after: "Finder"
+
+      - app: "/Applications/Trello.app"             
+        after: "Finder"
+
+      - app: "/Applications/Fantastical.app"        
+        after: "Finder"
+
+      - app: "/Applications/Slack.app"              
+        after: "Finder"
+
+      - app: "/Applications/WhatsApp.app"           
+        after: "Finder"

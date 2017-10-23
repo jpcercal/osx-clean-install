@@ -1,0 +1,3 @@
+#!/bin/bash
+
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code $1

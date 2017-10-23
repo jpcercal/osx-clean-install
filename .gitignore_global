@@ -1,0 +1,4654 @@
+
+# Created by https://www.toptal.com/developers/gitignore/api/adobe,android,androidstudio,angular,ansible,apachecordova,apachehadoop,aptanastudio,aspnetcore,autotools,batch,bower,c,c++,cakephp,certificates,chocolatey,cmake,coffeescript,composer,cordova,csharp,cypressio,dart,dbeaver,dotenv,dotnetcore,dropbox,drupal,drupal7,drupal8,eclipse,elixir,emacs,erlang,extjs,flask,fsharp,git,go,godot,goland,gpg,gradle,grails,grunt,helm,homebrew,hugo,intellij+all,java,jekyll,jetbrains+all,joomla,kohana,kotlin,laravel,latex,less,linux,lua,macos,magento1,magento2,maven,netbeans,node,objective-c,osx,perl,phalcon,phpcodesniffer,phpstorm+all,phpunit,powershell,prestashop,putty,pycharm+all,pydev,python,qt,react,reactnative,ruby,sass,sbt,scala,senchatouch,serverless,sourcepawn,ssh,sublimetext,svn,swift,symfony,tags,terraform,tortoisegit,vagrant,vim,visualstudio,visualstudiocode,vue,vuejs,webstorm+all,windows,wordpress,xamarinstudio,xcode,yarn,yii,zendframework,zsh
+# Edit at https://www.toptal.com/developers/gitignore?templates=adobe,android,androidstudio,angular,ansible,apachecordova,apachehadoop,aptanastudio,aspnetcore,autotools,batch,bower,c,c++,cakephp,certificates,chocolatey,cmake,coffeescript,composer,cordova,csharp,cypressio,dart,dbeaver,dotenv,dotnetcore,dropbox,drupal,drupal7,drupal8,eclipse,elixir,emacs,erlang,extjs,flask,fsharp,git,go,godot,goland,gpg,gradle,grails,grunt,helm,homebrew,hugo,intellij+all,java,jekyll,jetbrains+all,joomla,kohana,kotlin,laravel,latex,less,linux,lua,macos,magento1,magento2,maven,netbeans,node,objective-c,osx,perl,phalcon,phpcodesniffer,phpstorm+all,phpunit,powershell,prestashop,putty,pycharm+all,pydev,python,qt,react,reactnative,ruby,sass,sbt,scala,senchatouch,serverless,sourcepawn,ssh,sublimetext,svn,swift,symfony,tags,terraform,tortoisegit,vagrant,vim,visualstudio,visualstudiocode,vue,vuejs,webstorm+all,windows,wordpress,xamarinstudio,xcode,yarn,yii,zendframework,zsh
+
+### Adobe ###
+# Adobe Source Files
+*.psd
+*.ai
+*.indd
+*.prproj
+*.aep
+
+### Android ###
+# Gradle files
+.gradle/
+build/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Log/OS Files
+*.log
+
+# Android Studio generated files and folders
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+output.json
+
+# IntelliJ
+*.iml
+.idea/
+misc.xml
+deploymentTargetDropDown.xml
+render.experimental.xml
+
+# Keystore files
+*.jks
+*.keystore
+
+# Google Services (e.g. APIs or Firebase)
+google-services.json
+
+# Android Profiling
+*.hprof
+
+### Android Patch ###
+gen-external-apklibs
+
+# Replacement of .externalNativeBuild directories introduced
+# with Android Studio 3.5.
+
+### LaTeX ###
+## Core latex/pdflatex auxiliary files:
+*.aux
+*.lof
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+.*.lb
+
+## Intermediate documents:
+*.dvi
+*.xdv
+*-converted-to.*
+# these rules might exclude image files for figures etc.
+# *.ps
+# *.eps
+# *.pdf
+
+## Generated if empty string is given at "Please type another file name for output:"
+.pdf
+
+## Bibliography auxiliary files (bibtex/biblatex/biber):
+*.bbl
+*.bcf
+*.blg
+*-blx.aux
+*-blx.bib
+*.run.xml
+
+## Build tool auxiliary files:
+*.fdb_latexmk
+*.synctex
+*.synctex(busy)
+*.synctex.gz
+*.synctex.gz(busy)
+*.pdfsync
+
+## Build tool directories for auxiliary files
+# latexrun
+latex.out/
+
+## Auxiliary and intermediate files from other packages:
+# algorithms
+*.alg
+*.loa
+
+# achemso
+acs-*.bib
+
+# amsthm
+*.thm
+
+# beamer
+*.nav
+*.pre
+*.snm
+*.vrb
+
+# changes
+*.soc
+
+# comment
+*.cut
+
+# cprotect
+*.cpt
+
+# elsarticle (documentclass of Elsevier journals)
+*.spl
+
+# endnotes
+*.ent
+
+# fixme
+*.lox
+
+# feynmf/feynmp
+*.mf
+*.mp
+*.t[1-9]
+*.t[1-9][0-9]
+*.tfm
+
+#(r)(e)ledmac/(r)(e)ledpar
+*.end
+*.?end
+*.[1-9]
+*.[1-9][0-9]
+*.[1-9][0-9][0-9]
+*.[1-9]R
+*.[1-9][0-9]R
+*.[1-9][0-9][0-9]R
+*.eledsec[1-9]
+*.eledsec[1-9]R
+*.eledsec[1-9][0-9]
+*.eledsec[1-9][0-9]R
+*.eledsec[1-9][0-9][0-9]
+*.eledsec[1-9][0-9][0-9]R
+
+# glossaries
+*.acn
+*.acr
+*.glg
+*.glo
+*.gls
+*.glsdefs
+*.lzo
+*.lzs
+*.slg
+*.slo
+*.sls
+
+# uncomment this for glossaries-extra (will ignore makeindex's style files!)
+# *.ist
+
+# gnuplot
+*.gnuplot
+*.table
+
+# gnuplottex
+*-gnuplottex-*
+
+# gregoriotex
+*.gaux
+*.glog
+*.gtex
+
+# htlatex
+*.4ct
+*.4tc
+*.idv
+*.lg
+*.trc
+*.xref
+
+# hyperref
+*.brf
+
+# knitr
+*-concordance.tex
+# TODO Uncomment the next line if you use knitr and want to ignore its generated tikz files
+# *.tikz
+*-tikzDictionary
+
+# listings
+*.lol
+
+# luatexja-ruby
+*.ltjruby
+
+# makeidx
+*.idx
+*.ilg
+*.ind
+
+# minitoc
+*.maf
+*.mlf
+*.mlt
+*.mtc[0-9]*
+*.slf[0-9]*
+*.slt[0-9]*
+*.stc[0-9]*
+
+# minted
+_minted*
+*.pyg
+
+# morewrites
+*.mw
+
+# newpax
+*.newpax
+
+# nomencl
+*.nlg
+*.nlo
+*.nls
+
+# pax
+*.pax
+
+# pdfpcnotes
+*.pdfpc
+
+# sagetex
+*.sagetex.sage
+*.sagetex.py
+*.sagetex.scmd
+
+# scrwfile
+*.wrt
+
+# svg
+svg-inkscape/
+
+# sympy
+*.sout
+*.sympy
+sympy-plots-for-*.tex/
+
+# pdfcomment
+*.upa
+*.upb
+
+# pythontex
+*.pytxcode
+pythontex-files-*/
+
+# tcolorbox
+*.listing
+
+# thmtools
+*.loe
+
+# TikZ & PGF
+*.dpth
+*.md5
+*.auxlock
+
+# titletoc
+*.ptc
+
+# todonotes
+*.tdo
+
+# vhistory
+*.hst
+*.ver
+
+# easy-todo
+*.lod
+
+# xcolor
+*.xcp
+
+# xmpincl
+*.xmpi
+
+# xindy
+*.xdy
+
+# xypic precompiled matrices and outlines
+*.xyc
+*.xyd
+
+# endfloat
+*.ttt
+*.fff
+
+# Latexian
+TSWLatexianTemp*
+
+## Editors:
+# WinEdt
+*.bak
+*.sav
+
+# Texpad
+.texpadtmp
+
+# LyX
+*.lyx~
+
+# Kile
+*.backup
+
+# gummi
+.*.swp
+
+# KBibTeX
+*~[0-9]*
+
+# TeXnicCenter
+*.tps
+
+# auto folder when using emacs and auctex
+./auto/*
+*.el
+
+# expex forward references with \gathertags
+*-tags.tex
+
+# standalone packages
+*.sta
+
+# Makeindex log files
+*.lpz
+
+# xwatermark package
+*.xwm
+
+# REVTeX puts footnotes in the bibliography by default, unless the nofootinbib
+# option is specified. Footnotes are the stored in a file with suffix Notes.bib.
+# Uncomment the next line to have this generated file ignored.
+#*Notes.bib
+
+### LaTeX Patch ###
+# LIPIcs / OASIcs
+*.vtc
+
+# glossaries
+*.glstex
+
+### Angular ###
+## Angular ##
+# compiled output
+dist/
+tmp/
+app/**/*.js
+app/**/*.js.map
+
+# dependencies
+node_modules/
+bower_components/
+
+# IDEs and editors
+
+# misc
+.sass-cache/
+connect.lock/
+coverage/
+libpeerconnection.log/
+npm-debug.log
+testem.log
+typings/
+.angular/
+
+# e2e
+e2e/*.js
+e2e/*.map
+
+# System Files
+.DS_Store/
+
+### Ansible ###
+*.retry
+
+### ApacheCordova ###
+# Apache Cordova generated files and directories
+bin/*
+!/plugins
+!/plugins/android.json
+!/plugins/fetch.json
+plugins/*
+platforms/*
+
+### ApacheHadoop ###
+*.ipr
+*.iws
+*.orig
+*.rej
+.idea
+.svn
+.classpath
+.project
+.settings
+target
+hadoop-common-project/hadoop-kms/downloads/
+hadoop-hdfs-project/hadoop-hdfs/downloads
+hadoop-hdfs-project/hadoop-hdfs-httpfs/downloads
+hadoop-common-project/hadoop-common/src/test/resources/contract-test-options.xml
+hadoop-tools/hadoop-openstack/src/test/resources/contract-test-options.xml
+
+### AptanaStudio ###
+.metadata
+bin/
+*.tmp
+*.swp
+*~.nib
+.settings/
+.loadpath
+.recommenders
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# PyDev specific (Python IDE for Eclipse)
+*.pydevproject
+
+# CDT-specific (C/C++ Development Tooling)
+.cproject
+
+# CDT- autotools
+.autotools
+
+# Java annotation processor (APT)
+.factorypath
+
+# PDT-specific (PHP Development Tools)
+.buildpath
+
+# sbteclipse plugin
+.target
+
+# Tern plugin
+.tern-project
+
+# TeXlipse plugin
+.texlipse
+
+# STS (Spring Tool Suite)
+.springBeans
+
+# Code Recommenders
+.recommenders/
+
+# Annotation Processing
+.apt_generated/
+.apt_generated_test/
+
+# Scala IDE specific (Scala & Java development for Eclipse)
+.cache-main
+.scala_dependencies
+.worksheet
+
+# Uncomment this line if you wish to ignore the project description file.
+# Typically, this file would be tracked if it contains build/dependency configurations:
+#.project
+
+### ASPNETCore ###
+## Ignore Visual Studio temporary files, build results, and
+## files generated by popular Visual Studio add-ons.
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# User-specific files (MonoDevelop/Xamarin Studio)
+*.userprefs
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+
+# Visual Studio 2015 cache/options directory
+.vs/
+# Uncomment if you have tasks that create the project's static files in wwwroot
+#wwwroot/
+
+# MSTest test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# NUNIT
+*.VisualState.xml
+TestResult.xml
+
+# Build Results of an ATL Project
+[Dd]ebugPS/
+[Rr]eleasePS/
+dlldata.c
+
+# DNX
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+*_i.c
+*_p.c
+*_i.h
+*.ilk
+*.meta
+*.obj
+*.pch
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp_proj
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.svclog
+*.scc
+
+# Chutzpah Test files
+_Chutzpah*
+
+# Visual C++ cache files
+ipch/
+*.aps
+*.ncb
+*.opendb
+*.opensdf
+*.sdf
+*.cachefile
+*.VC.db
+*.VC.VC.opendb
+
+# Visual Studio profiler
+*.psess
+*.vsp
+*.vspx
+*.sap
+
+# TFS 2012 Local Workspace
+$tf/
+
+# Guidance Automation Toolkit
+*.gpState
+
+# ReSharper is a .NET coding add-in
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# JustCode is a .NET coding add-in
+.JustCode
+
+# TeamCity is a build add-in
+_TeamCity*
+
+# DotCover is a Code Coverage Tool
+*.dotCover
+
+# Visual Studio code coverage results
+*.coverage
+*.coveragexml
+
+# NCrunch
+_NCrunch_*
+.*crunch*.local.xml
+nCrunchTemp_*
+
+# MightyMoose
+*.mm.*
+AutoTest.Net/
+
+# Web workbench (sass)
+
+# Installshield output folder
+[Ee]xpress/
+
+# DocProject is a documentation generator add-in
+DocProject/buildhelp/
+DocProject/Help/*.HxT
+DocProject/Help/*.HxC
+DocProject/Help/*.hhc
+DocProject/Help/*.hhk
+DocProject/Help/*.hhp
+DocProject/Help/Html2
+DocProject/Help/html
+
+# Click-Once directory
+publish/
+
+# Publish Web Output
+*.[Pp]ublish.xml
+*.azurePubxml
+# TODO: Comment the next line if you want to checkin your web deploy settings
+# but database connection strings (with potential passwords) will be unencrypted
+*.pubxml
+*.publishproj
+
+# Microsoft Azure Web App publish settings. Comment the next line if you want to
+# checkin your Azure Web App publish settings, but sensitive information contained
+# in these scripts will be unencrypted
+PublishScripts/
+
+# NuGet Packages
+*.nupkg
+# The packages folder can be ignored because of Package Restore
+**/packages/*
+# except build/, which is used as an MSBuild target.
+!**/packages/build/
+# Uncomment if necessary however generally it will be regenerated when needed
+#!**/packages/repositories.config
+# NuGet v3's project.json files produces more ignoreable files
+*.nuget.props
+*.nuget.targets
+
+# Microsoft Azure Build Output
+csx/
+*.build.csdef
+
+# Microsoft Azure Emulator
+ecf/
+rcf/
+
+# Windows Store app package directories and files
+AppPackages/
+BundleArtifacts/
+Package.StoreAssociation.xml
+_pkginfo.txt
+
+# Visual Studio cache files
+# files ending in .cache can be ignored
+*.[Cc]ache
+# but keep track of directories ending in .cache
+!*.[Cc]ache/
+
+# Others
+ClientBin/
+~$*
+*~
+*.dbmdl
+*.dbproj.schemaview
+*.jfm
+*.pfx
+*.publishsettings
+orleans.codegen.cs
+
+# Since there are multiple workflows, uncomment next line to ignore bower_components
+# (https://github.com/github/gitignore/pull/1529#issuecomment-104372622)
+#bower_components/
+
+# RIA/Silverlight projects
+Generated_Code/
+
+# Backup & report files from converting an old project file
+# to a newer Visual Studio version. Backup files are not needed,
+# because we have git ;-)
+_UpgradeReport_Files/
+Backup*/
+UpgradeLog*.XML
+UpgradeLog*.htm
+
+# SQL Server files
+*.mdf
+*.ldf
+
+# Business Intelligence projects
+*.rdl.data
+*.bim.layout
+*.bim_*.settings
+
+# Microsoft Fakes
+FakesAssemblies/
+
+# GhostDoc plugin setting file
+*.GhostDoc.xml
+
+# Node.js Tools for Visual Studio
+.ntvs_analysis.dat
+
+# Visual Studio 6 build log
+*.plg
+
+# Visual Studio 6 workspace options file
+*.opt
+
+# Visual Studio LightSwitch build output
+**/*.HTMLClient/GeneratedArtifacts
+**/*.DesktopClient/GeneratedArtifacts
+**/*.DesktopClient/ModelManifest.xml
+**/*.Server/GeneratedArtifacts
+**/*.Server/ModelManifest.xml
+_Pvt_Extensions
+
+# Paket dependency manager
+.paket/paket.exe
+paket-files/
+
+# FAKE - F# Make
+.fake/
+
+# JetBrains Rider
+*.sln.iml
+
+# CodeRush
+.cr/
+
+# Python Tools for Visual Studio (PTVS)
+__pycache__/
+*.pyc
+
+# Cake - Uncomment if you are using it
+# tools/
+
+### Autotools ###
+# http://www.gnu.org/software/automake
+
+Makefile.in
+/ar-lib
+/mdate-sh
+/py-compile
+/test-driver
+/ylwrap
+.deps/
+.dirstamp
+
+# http://www.gnu.org/software/autoconf
+
+autom4te.cache
+/autoscan.log
+/autoscan-*.log
+/aclocal.m4
+/compile
+/config.cache
+/config.guess
+/config.h.in
+/config.log
+/config.status
+/config.sub
+/configure
+/configure.scan
+/depcomp
+/install-sh
+/missing
+/stamp-h1
+
+# https://www.gnu.org/software/libtool/
+
+/ltmain.sh
+
+# http://www.gnu.org/software/texinfo
+
+/texinfo.tex
+
+# http://www.gnu.org/software/m4/
+
+m4/libtool.m4
+m4/ltoptions.m4
+m4/ltsugar.m4
+m4/ltversion.m4
+m4/lt~obsolete.m4
+
+# Generated Makefile
+# (meta build system like autotools,
+# can automatically generate from config.status script
+# (which is called by configure script))
+Makefile
+
+### Autotools Patch ###
+
+### Batch ###
+# BatchFiles
+*.bat
+*.cmd
+*.btm
+
+### Bower ###
+bower_components
+.bower-cache
+.bower-registry
+.bower-tmp
+
+### ZendFramework ###
+# Composer files
+composer.phar
+vendor/
+
+# Local configs
+config/autoload/*.local.php
+
+# Binary gettext files
+*.mo
+
+# Data
+data/logs/
+data/cache/
+data/sessions/
+data/tmp/
+temp/
+
+#Doctrine 2
+data/DoctrineORMModule/Proxy/
+data/DoctrineORMModule/cache/
+
+# Legacy ZF1
+demos/
+extras/documentation
+
+### macOS ###
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+### C ###
+# Prerequisites
+*.d
+
+# Object files
+*.o
+*.ko
+*.elf
+
+# Linker output
+*.map
+*.exp
+
+# Precompiled Headers
+*.gch
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+
+# Kernel Module Compile Results
+*.mod*
+.tmp_versions/
+modules.order
+Module.symvers
+Mkfile.old
+dkms.conf
+
+### C++ ###
+# Prerequisites
+
+# Compiled Object files
+
+# Precompiled Headers
+
+# Compiled Dynamic libraries
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+
+# Executables
+
+### CakePHP ###
+# CakePHP 3
+
+/vendor/*
+/config/app.php
+
+/tmp/cache/models/*
+!/tmp/cache/models/empty
+/tmp/cache/persistent/*
+!/tmp/cache/persistent/empty
+/tmp/cache/views/*
+!/tmp/cache/views/empty
+/tmp/sessions/*
+!/tmp/sessions/empty
+/tmp/tests/*
+!/tmp/tests/empty
+
+/logs/*
+!/logs/empty
+
+# CakePHP 2
+
+/app/tmp/*
+/app/Config/core.php
+/app/Config/database.php
+/vendors/*
+
+### CoffeeScript ###
+*.js
+
+### certificates ###
+*.pem
+*.key
+*.crt
+*.cer
+*.der
+*.priv
+
+### Cordova ###
+# gitignore template for the Cordova framework
+# website: https://cordova.apache.org/
+#
+# Recommended template: Node.gitignore
+
+# App platform binaries and built files
+/platforms
+
+# Optional to ignore plugin Git clones
+#/plugins
+
+### Csharp ###
+##
+## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
+
+# User-specific files
+*.rsuser
+
+# User-specific files (MonoDevelop/Xamarin Studio)
+
+# Mono auto generated files
+mono_crash.*
+
+# Build results
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+[Ll]ogs/
+
+# Visual Studio 2015/2017 cache/options directory
+# Uncomment if you have tasks that create the project's static files in wwwroot
+
+# Visual Studio 2017 auto generated files
+Generated\ Files/
+
+# MSTest test Results
+
+# NUnit
+nunit-*.xml
+
+# Build Results of an ATL Project
+
+# Benchmark Results
+BenchmarkDotNet.Artifacts/
+
+# .NET Core
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# StyleCop
+StyleCopReport.xml
+
+# Files built by Visual Studio
+*_h.h
+*.iobj
+*.ipdb
+*_wpftmp.csproj
+*.tlog
+
+# Chutzpah Test files
+
+# Visual C++ cache files
+
+# Visual Studio profiler
+
+# Visual Studio Trace Files
+*.e2e
+
+# TFS 2012 Local Workspace
+
+# Guidance Automation Toolkit
+
+# ReSharper is a .NET coding add-in
+
+# TeamCity is a build add-in
+
+# DotCover is a Code Coverage Tool
+
+# AxoCover is a Code Coverage Tool
+.axoCover/*
+!.axoCover/settings.json
+
+# Coverlet is a free, cross platform Code Coverage Tool
+coverage*.json
+coverage*.xml
+coverage*.info
+
+# Visual Studio code coverage results
+
+# NCrunch
+
+# MightyMoose
+
+# Web workbench (sass)
+
+# Installshield output folder
+
+# DocProject is a documentation generator add-in
+
+# Click-Once directory
+
+# Publish Web Output
+# Note: Comment the next line if you want to checkin your web deploy settings,
+# but database connection strings (with potential passwords) will be unencrypted
+
+# Microsoft Azure Web App publish settings. Comment the next line if you want to
+# checkin your Azure Web App publish settings, but sensitive information contained
+# in these scripts will be unencrypted
+
+# NuGet Packages
+# NuGet Symbol Packages
+*.snupkg
+# The packages folder can be ignored because of Package Restore
+**/[Pp]ackages/*
+# except build/, which is used as an MSBuild target.
+!**/[Pp]ackages/build/
+# Uncomment if necessary however generally it will be regenerated when needed
+#!**/[Pp]ackages/repositories.config
+# NuGet v3's project.json files produces more ignorable files
+
+# Microsoft Azure Build Output
+
+# Microsoft Azure Emulator
+
+# Windows Store app package directories and files
+*.appx
+*.appxbundle
+*.appxupload
+
+# Visual Studio cache files
+# files ending in .cache can be ignored
+# but keep track of directories ending in .cache
+!?*.[Cc]ache/
+
+# Others
+
+# Including strong name files can present a security risk
+# (https://github.com/github/gitignore/pull/2483#issue-259490424)
+#*.snk
+
+# Since there are multiple workflows, uncomment next line to ignore bower_components
+# (https://github.com/github/gitignore/pull/1529#issuecomment-104372622)
+
+# RIA/Silverlight projects
+
+# Backup & report files from converting an old project file
+# to a newer Visual Studio version. Backup files are not needed,
+# because we have git ;-)
+ServiceFabricBackup/
+*.rptproj.bak
+
+# SQL Server files
+*.ndf
+
+# Business Intelligence projects
+*.rptproj.rsuser
+*- [Bb]ackup.rdl
+*- [Bb]ackup ([0-9]).rdl
+*- [Bb]ackup ([0-9][0-9]).rdl
+
+# Microsoft Fakes
+
+# GhostDoc plugin setting file
+
+# Node.js Tools for Visual Studio
+
+# Visual Studio 6 build log
+
+# Visual Studio 6 workspace options file
+
+# Visual Studio 6 auto-generated workspace file (contains which files were open etc.)
+*.vbw
+
+# Visual Studio 6 auto-generated project file (contains which files were open etc.)
+*.vbp
+
+# Visual Studio 6 workspace and project file (working project files containing files to include in project)
+*.dsw
+*.dsp
+
+# Visual Studio 6 technical files
+
+# Visual Studio LightSwitch build output
+
+# Paket dependency manager
+
+# FAKE - F# Make
+
+# CodeRush personal settings
+.cr/personal
+
+# Python Tools for Visual Studio (PTVS)
+
+# Cake - Uncomment if you are using it
+# tools/**
+# !tools/packages.config
+
+# Tabs Studio
+*.tss
+
+# Telerik's JustMock configuration file
+*.jmconfig
+
+# BizTalk build output
+*.btp.cs
+*.btm.cs
+*.odx.cs
+*.xsd.cs
+
+# OpenCover UI analysis results
+OpenCover/
+
+# Azure Stream Analytics local run output
+ASALocalRun/
+
+# MSBuild Binary and Structured Log
+*.binlog
+
+# NVidia Nsight GPU debugger configuration file
+*.nvuser
+
+# MFractors (Xamarin productivity tool) working folder
+.mfractor/
+
+# Local History for Visual Studio
+.localhistory/
+
+# Visual Studio History (VSHistory) files
+.vshistory/
+
+# BeatPulse healthcheck temp database
+healthchecksdb
+
+# Backup folder for Package Reference Convert tool in Visual Studio 2017
+MigrationBackup/
+
+# Ionide (cross platform F# VS Code tools) working folder
+.ionide/
+
+# Fody - auto-generated XML schema
+FodyWeavers.xsd
+
+# VS Code files for those working on multiple tools
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Local History for Visual Studio Code
+.history/
+
+# Windows Installer files from build outputs
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+
+# JetBrains Rider
+
+### Chocolatey ###
+# Exclude packaged modules
+
+### CMake ###
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps
+
+### CMake Patch ###
+# External projects
+*-prefix/
+
+### DBeaver ###
+# ide config file
+.dbeaver-data-sources*.xml
+
+### dotenv ###
+.env
+
+### DotnetCore ###
+# .NET Core build folders
+obj/
+
+# Common node modules locations
+/node_modules
+/wwwroot/node_modules
+
+### Composer ###
+/vendor/
+
+# Commit your application's lock file https://getcomposer.org/doc/01-basic-usage.md#commit-your-composer-lock-file-to-version-control
+# You may choose to ignore a library lock file http://getcomposer.org/doc/02-libraries.md#lock-file
+# composer.lock
+
+### Drupal ###
+# gitignore template for Drupal 8 projects
+# earlier versions of Drupal are tracked in `community/PHP/`
+# follows official upstream conventions:
+# https://www.drupal.org/docs/develop/using-composer
+
+# Ignore configuration files that may contain sensitive information
+/web/sites/*/*settings*.php
+/web/sites/*/*services*.yml
+
+# Ignore paths that may contain user-generated content
+/web/sites/*/files
+/web/sites/*/public
+/web/sites/*/private
+/web/sites/*/files-public
+/web/sites/*/files-private
+
+# Ignore paths that may contain temporary files
+/web/sites/*/translations
+/web/sites/*/tmp
+/web/sites/*/cache
+
+# Ignore drupal core (if not versioning drupal sources)
+/web/vendor
+/web/core
+/web/modules/README.txt
+/web/profiles/README.txt
+/web/sites/development.services.yml
+/web/sites/example.settings.local.php
+/web/sites/example.sites.php
+/web/sites/README.txt
+/web/themes/README.txt
+/web/.csslintrc
+/web/.editorconfig
+/web/.eslintignore
+/web/.eslintrc.json
+/web/.gitattributes
+/web/.htaccess
+/web/.ht.router.php
+/web/autoload.php
+/web/composer.json
+/web/composer.lock
+/web/example.gitignore
+/web/index.php
+/web/INSTALL.txt
+/web/LICENSE.txt
+/web/README.txt
+/web/robots.txt
+/web/update.php
+/web/web.config
+
+# Ignore vendor dependencies and scripts
+/vendor
+/composer.phar
+/composer
+/robo.phar
+/robo
+/drush.phar
+/drush
+/drupal.phar
+/drupal
+
+### Drupal7 ###
+# gitignore template for Drupal 7 projects
+# It is recommended that you use `Drupal.gitignore` as this is the latest version
+
+# Ignore configuration files that may contain sensitive information.
+sites/*/*settings*.php
+sites/example.sites.php
+
+# Ignore paths that contain generated content.
+files/
+sites/*/files
+sites/*/private
+sites/*/translations
+
+# Ignore default text files
+robots.txt
+/CHANGELOG.txt
+/COPYRIGHT.txt
+/INSTALL*.txt
+/LICENSE.txt
+/MAINTAINERS.txt
+/UPGRADE.txt
+/README.txt
+sites/README.txt
+sites/all/libraries/README.txt
+sites/all/modules/README.txt
+sites/all/themes/README.txt
+
+# Ignore everything but the "sites" folder ( for non core developer )
+.htaccess
+web.config
+authorize.php
+cron.php
+index.php
+install.php
+update.php
+xmlrpc.php
+/includes
+/misc
+/modules
+/profiles
+/scripts
+/themes
+
+### Drupal8 ###
+# gitignore template for Drupal 8 projects
+# earlier versions of Drupal are tracked in `community/PHP/`
+# follows official upstream conventions:
+# https://www.drupal.org/docs/develop/using-composer
+
+# Ignore configuration files that may contain sensitive information
+
+# Ignore paths that may contain user-generated content
+
+# Ignore paths that may contain temporary files
+
+# Ignore drupal core (if not versioning drupal sources)
+
+# Ignore vendor dependencies and scripts
+
+### Eclipse ###
+
+# External tool builders
+
+# Locally stored "Eclipse launch configurations"
+
+# PyDev specific (Python IDE for Eclipse)
+
+# CDT-specific (C/C++ Development Tooling)
+
+# CDT- autotools
+
+# Java annotation processor (APT)
+
+# PDT-specific (PHP Development Tools)
+
+# sbteclipse plugin
+
+# Tern plugin
+
+# TeXlipse plugin
+
+# STS (Spring Tool Suite)
+
+# Code Recommenders
+
+# Annotation Processing
+
+# Scala IDE specific (Scala & Java development for Eclipse)
+
+# Uncomment this line if you wish to ignore the project description file.
+# Typically, this file would be tracked if it contains build/dependency configurations:
+
+### Eclipse Patch ###
+# Spring Boot Tooling
+.sts4-cache/
+
+### Elixir ###
+/_build
+/cover
+/deps
+/doc
+/.fetch
+erl_crash.dump
+*.ez
+*.beam
+/config/*.secret.exs
+.elixir_ls/
+
+### Elixir Patch ###
+
+### CypressIO ###
+# gitignore template for the CypressIO, browser test framework
+# website: https://www.cypress.io/
+
+cypress/results/*
+cypress/reports/*
+cypress/screenshots/*
+cypress/videos/*
+
+### Erlang ###
+.eunit
+*.plt
+.concrete/DEV_MODE
+
+# rebar 2.x
+.rebar
+rel/example_project
+ebin/*.beam
+deps
+
+# rebar 3
+.rebar3
+_build/
+_checkouts/
+
+### Erlang Patch ###
+rebar3.crashdump
+
+### ExtJs ###
+.architect
+bootstrap.css
+bootstrap.js
+bootstrap.json
+bootstrap.jsonp
+classic.json
+classic.jsonp
+ext/
+modern.json
+modern.jsonp
+resources/sass/.sass-cache/
+resources/.arch-internal-preview.css
+.arch-internal-preview.css
+
+### Dart ###
+# See https://www.dartlang.org/guides/libraries/private-files
+
+# Files and directories created by pub
+.dart_tool/
+.packages
+# If you're building an application, you may want to check-in your pubspec.lock
+pubspec.lock
+
+# Directory created by dartdoc
+# If you don't generate documentation locally you can remove this line.
+doc/api/
+
+# dotenv environment variables file
+.env*
+
+# Avoid committing generated Javascript files:
+*.dart.js
+*.info.json      # Produced by the --dump-info flag.
+*.js             # When generated by dart2js. Don't specify *.js if your
+                 # project includes source files written in JavaScript.
+*.js_
+*.js.deps
+*.js.map
+
+.flutter-plugins
+.flutter-plugins-dependencies
+
+### Dart Patch ###
+# dotenv environment variables file
+
+### fsharp ###
+lib/debug
+lib/release
+Debug
+obj
+bin
+/build/
+!.paket/paket.bootstrapper.exe
+
+### Git ###
+# Created by git for backups. To disable backups in Git:
+# $ git config --global mergetool.keepBackup false
+
+# Created by git when using merge tools for conflicts
+*.BACKUP.*
+*.BASE.*
+*.LOCAL.*
+*.REMOTE.*
+*_BACKUP_*.txt
+*_BASE_*.txt
+*_LOCAL_*.txt
+*_REMOTE_*.txt
+
+### Go ###
+# If you prefer the allow list template instead of the deny list, see community template:
+# https://github.com/github/gitignore/blob/main/community/Golang/Go.AllowList.gitignore
+# Binaries for programs and plugins
+*.exe~
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+
+# Dependency directories (remove the comment below to include it)
+# vendor/
+
+# Go workspace file
+go.work
+
+### Go Patch ###
+/Godeps/
+
+### Godot ###
+# Godot-specific ignores
+.import/
+export.cfg
+export_presets.cfg
+
+# Imported translations (automatically generated from CSV files)
+*.translation
+
+# Mono-specific ignores
+.mono/
+data_*/
+
+### Goland ###
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm, Rider and Goland
+# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+
+# User-specific stuff
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+
+# AWS User-specific
+.idea/**/aws.xml
+
+# Generated files
+.idea/**/contentModel.xml
+
+# Sensitive or high-churn files
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
+
+# Gradle
+.idea/**/gradle.xml
+.idea/**/libraries
+
+# Gradle and Maven with auto-import
+# When using Gradle or Maven with auto-import, you should exclude module files,
+# since they will be recreated, and may cause churn.  Uncomment if using
+# auto-import.
+# .idea/artifacts
+# .idea/compiler.xml
+# .idea/jarRepositories.xml
+# .idea/modules.xml
+# .idea/*.iml
+# .idea/modules
+# *.iml
+# *.ipr
+
+# CMake
+cmake-build-*/
+
+# Mongo Explorer plugin
+.idea/**/mongoSettings.xml
+
+# File-based project format
+
+# IntelliJ
+out/
+
+# mpeltonen/sbt-idea plugin
+.idea_modules/
+
+# JIRA plugin
+atlassian-ide-plugin.xml
+
+# Cursive Clojure plugin
+.idea/replstate.xml
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
+
+# Editor-based Rest Client
+.idea/httpRequests
+
+# Ignores the whole .idea folder and all .iml files
+
+# Android studio 3.1+ serialized cache file
+.idea/caches/build_file_checksums.ser
+
+### GPG ###
+secring.*
+
+
+### Dropbox ###
+# Dropbox settings and caches
+.dropbox
+.dropbox.attr
+.dropbox.cache
+
+### Grails ###
+# .gitignore for Grails 1.2 and 1.3
+# Although this should work for most versions of grails, it is
+# suggested that you use the "grails integrate-with --git" command
+# to generate your .gitignore file.
+
+# web application files
+/web-app/WEB-INF/classes
+
+# default HSQL database files for production mode
+/prodDb.*
+
+# general HSQL database files
+*Db.properties
+*Db.script
+
+# logs
+/stacktrace.log
+/test/reports
+/logs
+
+# project release file
+/*.war
+
+# plugin release files
+/*.zip
+/plugin.xml
+
+# older plugin install locations
+/plugins
+/web-app/plugins
+
+# "temporary" build files
+/target
+
+### grunt ###
+# Grunt usually compiles files inside this directory
+
+# Grunt usually preprocesses files such as coffeescript, compass... inside the .tmp directory
+.tmp/
+
+### Helm ###
+# Chart dependencies
+**/charts/*.tgz
+
+### Homebrew ###
+Brewfile.lock.json
+
+### Hugo ###
+# Generated files by hugo
+/public/
+/resources/_gen/
+/assets/jsconfig.json
+hugo_stats.json
+
+# Executable may be added to repository
+hugo.exe
+hugo.darwin
+hugo.linux
+
+# Temporary lock file while building
+/.hugo_build.lock
+
+### Intellij+all ###
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
+# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+
+# User-specific stuff
+
+# AWS User-specific
+
+# Generated files
+
+# Sensitive or high-churn files
+
+# Gradle
+
+# Gradle and Maven with auto-import
+# When using Gradle or Maven with auto-import, you should exclude module files,
+# since they will be recreated, and may cause churn.  Uncomment if using
+# auto-import.
+# .idea/artifacts
+# .idea/compiler.xml
+# .idea/jarRepositories.xml
+# .idea/modules.xml
+# .idea/*.iml
+# .idea/modules
+# *.iml
+# *.ipr
+
+# CMake
+
+# Mongo Explorer plugin
+
+# File-based project format
+
+# IntelliJ
+
+# mpeltonen/sbt-idea plugin
+
+# JIRA plugin
+
+# Cursive Clojure plugin
+
+# SonarLint plugin
+.idea/sonarlint/
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+
+# Editor-based Rest Client
+
+# Android studio 3.1+ serialized cache file
+
+### Intellij+all Patch ###
+# Ignore everything but code style settings and run configurations
+# that are supposed to be shared within teams.
+
+.idea/*
+
+!.idea/codeStyles
+!.idea/runConfigurations
+
+### Java ###
+# Compiled class file
+*.class
+
+# Log file
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+replay_pid*
+
+### Jekyll ###
+_site/
+.jekyll-cache/
+.jekyll-metadata
+# Ignore folders generated by Bundler
+.bundle/
+
+### JetBrains+all ###
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
+# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+
+# User-specific stuff
+
+# AWS User-specific
+
+# Generated files
+
+# Sensitive or high-churn files
+
+# Gradle
+
+# Gradle and Maven with auto-import
+# When using Gradle or Maven with auto-import, you should exclude module files,
+# since they will be recreated, and may cause churn.  Uncomment if using
+# auto-import.
+# .idea/artifacts
+# .idea/compiler.xml
+# .idea/jarRepositories.xml
+# .idea/modules.xml
+# .idea/*.iml
+# .idea/modules
+# *.iml
+# *.ipr
+
+# CMake
+
+# Mongo Explorer plugin
+
+# File-based project format
+
+# IntelliJ
+
+# mpeltonen/sbt-idea plugin
+
+# JIRA plugin
+
+# Cursive Clojure plugin
+
+# SonarLint plugin
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+
+# Editor-based Rest Client
+
+# Android studio 3.1+ serialized cache file
+
+### JetBrains+all Patch ###
+# Ignore everything but code style settings and run configurations
+# that are supposed to be shared within teams.
+
+
+
+### Joomla ###
+/.htaccess
+/administrator/cache/*
+/administrator/components/com_actionlogs/*
+/administrator/components/com_admin/*
+/administrator/components/com_ajax/*
+/administrator/components/com_associations/*
+/administrator/components/com_banners/*
+/administrator/components/com_cache/*
+/administrator/components/com_categories/*
+/administrator/components/com_checkin/*
+/administrator/components/com_config/*
+/administrator/components/com_contact/*
+/administrator/components/com_content/*
+/administrator/components/com_contenthistory/*
+/administrator/components/com_cpanel/*
+/administrator/components/com_fields/*
+/administrator/components/com_finder/*
+/administrator/components/com_installer/*
+/administrator/components/com_joomlaupdate/*
+/administrator/components/com_languages/*
+/administrator/components/com_login/*
+/administrator/components/com_media/*
+/administrator/components/com_menus/*
+/administrator/components/com_messages/*
+/administrator/components/com_modules/*
+/administrator/components/com_newsfeeds/*
+/administrator/components/com_plugins/*
+/administrator/components/com_postinstall/*
+/administrator/components/com_privacy/*
+/administrator/components/com_redirect/*
+/administrator/components/com_search/*
+/administrator/components/com_tags/*
+/administrator/components/com_templates/*
+/administrator/components/com_users/*
+/administrator/help/*
+/administrator/includes/*
+/administrator/index.php
+/administrator/language/en-GB/en-GB.com_actionlogs.ini
+/administrator/language/en-GB/en-GB.com_actionlogs.sys.ini
+/administrator/language/en-GB/en-GB.com_admin.ini
+/administrator/language/en-GB/en-GB.com_admin.sys.ini
+/administrator/language/en-GB/en-GB.com_ajax.ini
+/administrator/language/en-GB/en-GB.com_ajax.sys.ini
+/administrator/language/en-GB/en-GB.com_associations.ini
+/administrator/language/en-GB/en-GB.com_associations.sys.ini
+/administrator/language/en-GB/en-GB.com_banners.ini
+/administrator/language/en-GB/en-GB.com_banners.sys.ini
+/administrator/language/en-GB/en-GB.com_cache.ini
+/administrator/language/en-GB/en-GB.com_cache.sys.ini
+/administrator/language/en-GB/en-GB.com_categories.ini
+/administrator/language/en-GB/en-GB.com_categories.sys.ini
+/administrator/language/en-GB/en-GB.com_checkin.ini
+/administrator/language/en-GB/en-GB.com_checkin.sys.ini
+/administrator/language/en-GB/en-GB.com_config.ini
+/administrator/language/en-GB/en-GB.com_config.sys.ini
+/administrator/language/en-GB/en-GB.com_contact.ini
+/administrator/language/en-GB/en-GB.com_contact.sys.ini
+/administrator/language/en-GB/en-GB.com_content.ini
+/administrator/language/en-GB/en-GB.com_content.sys.ini
+/administrator/language/en-GB/en-GB.com_contenthistory.ini
+/administrator/language/en-GB/en-GB.com_contenthistory.sys.ini
+/administrator/language/en-GB/en-GB.com_cpanel.ini
+/administrator/language/en-GB/en-GB.com_cpanel.sys.ini
+/administrator/language/en-GB/en-GB.com_fields.ini
+/administrator/language/en-GB/en-GB.com_fields.sys.ini
+/administrator/language/en-GB/en-GB.com_finder.ini
+/administrator/language/en-GB/en-GB.com_finder.sys.ini
+/administrator/language/en-GB/en-GB.com_installer.ini
+/administrator/language/en-GB/en-GB.com_installer.sys.ini
+/administrator/language/en-GB/en-GB.com_joomlaupdate.ini
+/administrator/language/en-GB/en-GB.com_joomlaupdate.sys.ini
+/administrator/language/en-GB/en-GB.com_languages.ini
+/administrator/language/en-GB/en-GB.com_languages.sys.ini
+/administrator/language/en-GB/en-GB.com_login.ini
+/administrator/language/en-GB/en-GB.com_login.sys.ini
+/administrator/language/en-GB/en-GB.com_mailto.sys.ini
+/administrator/language/en-GB/en-GB.com_media.ini
+/administrator/language/en-GB/en-GB.com_media.sys.ini
+/administrator/language/en-GB/en-GB.com_menus.ini
+/administrator/language/en-GB/en-GB.com_menus.sys.ini
+/administrator/language/en-GB/en-GB.com_messages.ini
+/administrator/language/en-GB/en-GB.com_messages.sys.ini
+/administrator/language/en-GB/en-GB.com_modules.ini
+/administrator/language/en-GB/en-GB.com_modules.sys.ini
+/administrator/language/en-GB/en-GB.com_newsfeeds.ini
+/administrator/language/en-GB/en-GB.com_newsfeeds.sys.ini
+/administrator/language/en-GB/en-GB.com_plugins.ini
+/administrator/language/en-GB/en-GB.com_plugins.sys.ini
+/administrator/language/en-GB/en-GB.com_postinstall.ini
+/administrator/language/en-GB/en-GB.com_postinstall.sys.ini
+/administrator/language/en-GB/en-GB.com_privacy.ini
+/administrator/language/en-GB/en-GB.com_privacy.sys.ini
+/administrator/language/en-GB/en-GB.com_redirect.ini
+/administrator/language/en-GB/en-GB.com_redirect.sys.ini
+/administrator/language/en-GB/en-GB.com_search.ini
+/administrator/language/en-GB/en-GB.com_search.sys.ini
+/administrator/language/en-GB/en-GB.com_tags.ini
+/administrator/language/en-GB/en-GB.com_tags.sys.ini
+/administrator/language/en-GB/en-GB.com_templates.ini
+/administrator/language/en-GB/en-GB.com_templates.sys.ini
+/administrator/language/en-GB/en-GB.com_users.ini
+/administrator/language/en-GB/en-GB.com_users.sys.ini
+/administrator/language/en-GB/en-GB.com_weblinks.ini
+/administrator/language/en-GB/en-GB.com_weblinks.sys.ini
+/administrator/language/en-GB/en-GB.com_wrapper.ini
+/administrator/language/en-GB/en-GB.com_wrapper.sys.ini
+/administrator/language/en-GB/en-GB.ini
+/administrator/language/en-GB/en-GB.lib_joomla.ini
+/administrator/language/en-GB/en-GB.localise.php
+/administrator/language/en-GB/en-GB.mod_custom.ini
+/administrator/language/en-GB/en-GB.mod_custom.sys.ini
+/administrator/language/en-GB/en-GB.mod_feed.ini
+/administrator/language/en-GB/en-GB.mod_feed.sys.ini
+/administrator/language/en-GB/en-GB.mod_latest.ini
+/administrator/language/en-GB/en-GB.mod_latest.sys.ini
+/administrator/language/en-GB/en-GB.mod_latestactions.ini
+/administrator/language/en-GB/en-GB.mod_latestactions.sys.ini
+/administrator/language/en-GB/en-GB.mod_logged.ini
+/administrator/language/en-GB/en-GB.mod_logged.sys.ini
+/administrator/language/en-GB/en-GB.mod_login.ini
+/administrator/language/en-GB/en-GB.mod_login.sys.ini
+/administrator/language/en-GB/en-GB.mod_menu.ini
+/administrator/language/en-GB/en-GB.mod_menu.sys.ini
+/administrator/language/en-GB/en-GB.mod_multilangstatus.ini
+/administrator/language/en-GB/en-GB.mod_multilangstatus.sys.ini
+/administrator/language/en-GB/en-GB.mod_online.ini
+/administrator/language/en-GB/en-GB.mod_online.sys.ini
+/administrator/language/en-GB/en-GB.mod_popular.ini
+/administrator/language/en-GB/en-GB.mod_popular.sys.ini
+/administrator/language/en-GB/en-GB.mod_privacy_dashboard.ini
+/administrator/language/en-GB/en-GB.mod_privacy_dashboard.sys.ini
+/administrator/language/en-GB/en-GB.mod_quickicon.ini
+/administrator/language/en-GB/en-GB.mod_quickicon.sys.ini
+/administrator/language/en-GB/en-GB.mod_sampledata.ini
+/administrator/language/en-GB/en-GB.mod_sampledata.sys.ini
+/administrator/language/en-GB/en-GB.mod_stats_admin.ini
+/administrator/language/en-GB/en-GB.mod_stats_admin.sys.ini
+/administrator/language/en-GB/en-GB.mod_status.ini
+/administrator/language/en-GB/en-GB.mod_status.sys.ini
+/administrator/language/en-GB/en-GB.mod_submenu.ini
+/administrator/language/en-GB/en-GB.mod_submenu.sys.ini
+/administrator/language/en-GB/en-GB.mod_title.ini
+/administrator/language/en-GB/en-GB.mod_title.sys.ini
+/administrator/language/en-GB/en-GB.mod_toolbar.ini
+/administrator/language/en-GB/en-GB.mod_toolbar.sys.ini
+/administrator/language/en-GB/en-GB.mod_unread.ini
+/administrator/language/en-GB/en-GB.mod_unread.sys.ini
+/administrator/language/en-GB/en-GB.mod_version.ini
+/administrator/language/en-GB/en-GB.mod_version.sys.ini
+/administrator/language/en-GB/en-GB.plg_actionlog_joomla.ini
+/administrator/language/en-GB/en-GB.plg_actionlog_joomla.sys.ini
+/administrator/language/en-GB/en-GB.plg_authentication_cookie.ini
+/administrator/language/en-GB/en-GB.plg_authentication_cookie.sys.ini
+/administrator/language/en-GB/en-GB.plg_authentication_example.ini
+/administrator/language/en-GB/en-GB.plg_authentication_example.sys.ini
+/administrator/language/en-GB/en-GB.plg_authentication_gmail.ini
+/administrator/language/en-GB/en-GB.plg_authentication_gmail.sys.ini
+/administrator/language/en-GB/en-GB.plg_authentication_joomla.ini
+/administrator/language/en-GB/en-GB.plg_authentication_joomla.sys.ini
+/administrator/language/en-GB/en-GB.plg_authentication_ldap.ini
+/administrator/language/en-GB/en-GB.plg_authentication_ldap.sys.ini
+/administrator/language/en-GB/en-GB.plg_captcha_recaptcha.ini
+/administrator/language/en-GB/en-GB.plg_captcha_recaptcha.sys.ini
+/administrator/language/en-GB/en-GB.plg_captcha_recaptcha_invisible.ini
+/administrator/language/en-GB/en-GB.plg_captcha_recaptcha_invisible.sys.ini
+/administrator/language/en-GB/en-GB.plg_content_confirmconsent.ini
+/administrator/language/en-GB/en-GB.plg_content_confirmconsent.sys.ini
+/administrator/language/en-GB/en-GB.plg_content_contact.ini
+/administrator/language/en-GB/en-GB.plg_content_contact.sys.ini
+/administrator/language/en-GB/en-GB.plg_content_emailcloak.ini
+/administrator/language/en-GB/en-GB.plg_content_emailcloak.sys.ini
+/administrator/language/en-GB/en-GB.plg_content_fields.ini
+/administrator/language/en-GB/en-GB.plg_content_fields.sys.ini
+/administrator/language/en-GB/en-GB.plg_content_finder.ini
+/administrator/language/en-GB/en-GB.plg_content_finder.sys.ini
+/administrator/language/en-GB/en-GB.plg_content_geshi.ini
+/administrator/language/en-GB/en-GB.plg_content_geshi.sys.ini
+/administrator/language/en-GB/en-GB.plg_content_joomla.ini
+/administrator/language/en-GB/en-GB.plg_content_joomla.sys.ini
+/administrator/language/en-GB/en-GB.plg_content_loadmodule.ini
+/administrator/language/en-GB/en-GB.plg_content_loadmodule.sys.ini
+/administrator/language/en-GB/en-GB.plg_content_pagebreak.ini
+/administrator/language/en-GB/en-GB.plg_content_pagebreak.sys.ini
+/administrator/language/en-GB/en-GB.plg_content_pagenavigation.ini
+/administrator/language/en-GB/en-GB.plg_content_pagenavigation.sys.ini
+/administrator/language/en-GB/en-GB.plg_content_vote.ini
+/administrator/language/en-GB/en-GB.plg_content_vote.sys.ini
+/administrator/language/en-GB/en-GB.plg_editors-xtd_article.ini
+/administrator/language/en-GB/en-GB.plg_editors-xtd_article.sys.ini
+/administrator/language/en-GB/en-GB.plg_editors-xtd_contact.ini
+/administrator/language/en-GB/en-GB.plg_editors-xtd_contact.sys.ini
+/administrator/language/en-GB/en-GB.plg_editors-xtd_fields.ini
+/administrator/language/en-GB/en-GB.plg_editors-xtd_fields.sys.ini
+/administrator/language/en-GB/en-GB.plg_editors-xtd_image.ini
+/administrator/language/en-GB/en-GB.plg_editors-xtd_image.sys.ini
+/administrator/language/en-GB/en-GB.plg_editors-xtd_menu.ini
+/administrator/language/en-GB/en-GB.plg_editors-xtd_menu.sys.ini
+/administrator/language/en-GB/en-GB.plg_editors-xtd_module.ini
+/administrator/language/en-GB/en-GB.plg_editors-xtd_module.sys.ini
+/administrator/language/en-GB/en-GB.plg_editors-xtd_pagebreak.ini
+/administrator/language/en-GB/en-GB.plg_editors-xtd_pagebreak.sys.ini
+/administrator/language/en-GB/en-GB.plg_editors-xtd_readmore.ini
+/administrator/language/en-GB/en-GB.plg_editors-xtd_readmore.sys.ini
+/administrator/language/en-GB/en-GB.plg_editors_codemirror.ini
+/administrator/language/en-GB/en-GB.plg_editors_codemirror.sys.ini
+/administrator/language/en-GB/en-GB.plg_editors_none.ini
+/administrator/language/en-GB/en-GB.plg_editors_none.sys.ini
+/administrator/language/en-GB/en-GB.plg_editors_tinymce.ini
+/administrator/language/en-GB/en-GB.plg_editors_tinymce.sys.ini
+/administrator/language/en-GB/en-GB.plg_extension_joomla.ini
+/administrator/language/en-GB/en-GB.plg_extension_joomla.sys.ini
+/administrator/language/en-GB/en-GB.plg_fields_calendar.ini
+/administrator/language/en-GB/en-GB.plg_fields_calendar.sys.ini
+/administrator/language/en-GB/en-GB.plg_fields_checkboxes.ini
+/administrator/language/en-GB/en-GB.plg_fields_checkboxes.sys.ini
+/administrator/language/en-GB/en-GB.plg_fields_color.ini
+/administrator/language/en-GB/en-GB.plg_fields_color.sys.ini
+/administrator/language/en-GB/en-GB.plg_fields_editor.ini
+/administrator/language/en-GB/en-GB.plg_fields_editor.sys.ini
+/administrator/language/en-GB/en-GB.plg_fields_image.ini
+/administrator/language/en-GB/en-GB.plg_fields_image.sys.ini
+/administrator/language/en-GB/en-GB.plg_fields_imagelist.ini
+/administrator/language/en-GB/en-GB.plg_fields_imagelist.sys.ini
+/administrator/language/en-GB/en-GB.plg_fields_integer.ini
+/administrator/language/en-GB/en-GB.plg_fields_integer.sys.ini
+/administrator/language/en-GB/en-GB.plg_fields_list.ini
+/administrator/language/en-GB/en-GB.plg_fields_list.sys.ini
+/administrator/language/en-GB/en-GB.plg_fields_media.ini
+/administrator/language/en-GB/en-GB.plg_fields_media.sys.ini
+/administrator/language/en-GB/en-GB.plg_fields_radio.ini
+/administrator/language/en-GB/en-GB.plg_fields_radio.sys.ini
+/administrator/language/en-GB/en-GB.plg_fields_repeatable.ini
+/administrator/language/en-GB/en-GB.plg_fields_repeatable.sys.ini
+/administrator/language/en-GB/en-GB.plg_fields_sql.ini
+/administrator/language/en-GB/en-GB.plg_fields_sql.sys.ini
+/administrator/language/en-GB/en-GB.plg_fields_text.ini
+/administrator/language/en-GB/en-GB.plg_fields_text.sys.ini
+/administrator/language/en-GB/en-GB.plg_fields_textarea.ini
+/administrator/language/en-GB/en-GB.plg_fields_textarea.sys.ini
+/administrator/language/en-GB/en-GB.plg_fields_url.ini
+/administrator/language/en-GB/en-GB.plg_fields_url.sys.ini
+/administrator/language/en-GB/en-GB.plg_fields_user.ini
+/administrator/language/en-GB/en-GB.plg_fields_user.sys.ini
+/administrator/language/en-GB/en-GB.plg_fields_usergrouplist.ini
+/administrator/language/en-GB/en-GB.plg_fields_usergrouplist.sys.ini
+/administrator/language/en-GB/en-GB.plg_finder_categories.ini
+/administrator/language/en-GB/en-GB.plg_finder_categories.sys.ini
+/administrator/language/en-GB/en-GB.plg_finder_contacts.ini
+/administrator/language/en-GB/en-GB.plg_finder_contacts.sys.ini
+/administrator/language/en-GB/en-GB.plg_finder_content.ini
+/administrator/language/en-GB/en-GB.plg_finder_content.sys.ini
+/administrator/language/en-GB/en-GB.plg_finder_newsfeeds.ini
+/administrator/language/en-GB/en-GB.plg_finder_newsfeeds.sys.ini
+/administrator/language/en-GB/en-GB.plg_finder_tags.ini
+/administrator/language/en-GB/en-GB.plg_finder_tags.sys.ini
+/administrator/language/en-GB/en-GB.plg_finder_weblinks.ini
+/administrator/language/en-GB/en-GB.plg_finder_weblinks.sys.ini
+/administrator/language/en-GB/en-GB.plg_installer_folderinstaller.ini
+/administrator/language/en-GB/en-GB.plg_installer_folderinstaller.sys.ini
+/administrator/language/en-GB/en-GB.plg_installer_packageinstaller.ini
+/administrator/language/en-GB/en-GB.plg_installer_packageinstaller.sys.ini
+/administrator/language/en-GB/en-GB.plg_installer_urlinstaller.ini
+/administrator/language/en-GB/en-GB.plg_installer_urlinstaller.sys.ini
+/administrator/language/en-GB/en-GB.plg_installer_webinstaller.ini
+/administrator/language/en-GB/en-GB.plg_installer_webinstaller.sys.ini
+/administrator/language/en-GB/en-GB.plg_privacy_actionlogs.ini
+/administrator/language/en-GB/en-GB.plg_privacy_actionlogs.sys.ini
+/administrator/language/en-GB/en-GB.plg_privacy_consents.ini
+/administrator/language/en-GB/en-GB.plg_privacy_consents.sys.ini
+/administrator/language/en-GB/en-GB.plg_privacy_contact.ini
+/administrator/language/en-GB/en-GB.plg_privacy_contact.sys.ini
+/administrator/language/en-GB/en-GB.plg_privacy_content.ini
+/administrator/language/en-GB/en-GB.plg_privacy_content.sys.ini
+/administrator/language/en-GB/en-GB.plg_privacy_message.ini
+/administrator/language/en-GB/en-GB.plg_privacy_message.sys.ini
+/administrator/language/en-GB/en-GB.plg_privacy_user.ini
+/administrator/language/en-GB/en-GB.plg_privacy_user.sys.ini
+/administrator/language/en-GB/en-GB.plg_quickicon_extensionupdate.ini
+/administrator/language/en-GB/en-GB.plg_quickicon_extensionupdate.sys.ini
+/administrator/language/en-GB/en-GB.plg_quickicon_joomlaupdate.ini
+/administrator/language/en-GB/en-GB.plg_quickicon_joomlaupdate.sys.ini
+/administrator/language/en-GB/en-GB.plg_quickicon_phpversioncheck.ini
+/administrator/language/en-GB/en-GB.plg_quickicon_phpversioncheck.sys.ini
+/administrator/language/en-GB/en-GB.plg_quickicon_privacycheck.ini
+/administrator/language/en-GB/en-GB.plg_quickicon_privacycheck.sys.ini
+/administrator/language/en-GB/en-GB.plg_sampledata_blog.ini
+/administrator/language/en-GB/en-GB.plg_sampledata_blog.sys.ini
+/administrator/language/en-GB/en-GB.plg_search_categories.ini
+/administrator/language/en-GB/en-GB.plg_search_categories.sys.ini
+/administrator/language/en-GB/en-GB.plg_search_contacts.ini
+/administrator/language/en-GB/en-GB.plg_search_contacts.sys.ini
+/administrator/language/en-GB/en-GB.plg_search_content.ini
+/administrator/language/en-GB/en-GB.plg_search_content.sys.ini
+/administrator/language/en-GB/en-GB.plg_search_newsfeeds.ini
+/administrator/language/en-GB/en-GB.plg_search_newsfeeds.sys.ini
+/administrator/language/en-GB/en-GB.plg_search_tags.ini
+/administrator/language/en-GB/en-GB.plg_search_tags.sys.ini
+/administrator/language/en-GB/en-GB.plg_search_weblinks.ini
+/administrator/language/en-GB/en-GB.plg_search_weblinks.sys.ini
+/administrator/language/en-GB/en-GB.plg_system_actionlogs.ini
+/administrator/language/en-GB/en-GB.plg_system_actionlogs.sys.ini
+/administrator/language/en-GB/en-GB.plg_system_cache.ini
+/administrator/language/en-GB/en-GB.plg_system_cache.sys.ini
+/administrator/language/en-GB/en-GB.plg_system_debug.ini
+/administrator/language/en-GB/en-GB.plg_system_debug.sys.ini
+/administrator/language/en-GB/en-GB.plg_system_fields.ini
+/administrator/language/en-GB/en-GB.plg_system_fields.sys.ini
+/administrator/language/en-GB/en-GB.plg_system_highlight.ini
+/administrator/language/en-GB/en-GB.plg_system_highlight.sys.ini
+/administrator/language/en-GB/en-GB.plg_system_languagecode.ini
+/administrator/language/en-GB/en-GB.plg_system_languagecode.sys.ini
+/administrator/language/en-GB/en-GB.plg_system_languagefilter.ini
+/administrator/language/en-GB/en-GB.plg_system_languagefilter.sys.ini
+/administrator/language/en-GB/en-GB.plg_system_log.ini
+/administrator/language/en-GB/en-GB.plg_system_log.sys.ini
+/administrator/language/en-GB/en-GB.plg_system_logout.ini
+/administrator/language/en-GB/en-GB.plg_system_logout.sys.ini
+/administrator/language/en-GB/en-GB.plg_system_logrotation.ini
+/administrator/language/en-GB/en-GB.plg_system_logrotation.sys.ini
+/administrator/language/en-GB/en-GB.plg_system_p3p.ini
+/administrator/language/en-GB/en-GB.plg_system_p3p.sys.ini
+/administrator/language/en-GB/en-GB.plg_system_privacyconsent.ini
+/administrator/language/en-GB/en-GB.plg_system_privacyconsent.sys.ini
+/administrator/language/en-GB/en-GB.plg_system_redirect.ini
+/administrator/language/en-GB/en-GB.plg_system_redirect.sys.ini
+/administrator/language/en-GB/en-GB.plg_system_remember.ini
+/administrator/language/en-GB/en-GB.plg_system_remember.sys.ini
+/administrator/language/en-GB/en-GB.plg_system_sef.ini
+/administrator/language/en-GB/en-GB.plg_system_sef.sys.ini
+/administrator/language/en-GB/en-GB.plg_system_sessiongc.ini
+/administrator/language/en-GB/en-GB.plg_system_sessiongc.sys.ini
+/administrator/language/en-GB/en-GB.plg_system_stats.ini
+/administrator/language/en-GB/en-GB.plg_system_stats.sys.ini
+/administrator/language/en-GB/en-GB.plg_system_updatenotification.ini
+/administrator/language/en-GB/en-GB.plg_system_updatenotification.sys.ini
+/administrator/language/en-GB/en-GB.plg_twofactorauth_totp.ini
+/administrator/language/en-GB/en-GB.plg_twofactorauth_totp.sys.ini
+/administrator/language/en-GB/en-GB.plg_twofactorauth_yubikey.ini
+/administrator/language/en-GB/en-GB.plg_twofactorauth_yubikey.sys.ini
+/administrator/language/en-GB/en-GB.plg_user_contactcreator.ini
+/administrator/language/en-GB/en-GB.plg_user_contactcreator.sys.ini
+/administrator/language/en-GB/en-GB.plg_user_joomla.ini
+/administrator/language/en-GB/en-GB.plg_user_joomla.sys.ini
+/administrator/language/en-GB/en-GB.plg_user_profile.ini
+/administrator/language/en-GB/en-GB.plg_user_profile.sys.ini
+/administrator/language/en-GB/en-GB.plg_user_terms.ini
+/administrator/language/en-GB/en-GB.plg_user_terms.sys.ini
+/administrator/language/en-GB/en-GB.tpl_hathor.ini
+/administrator/language/en-GB/en-GB.tpl_hathor.sys.ini
+/administrator/language/en-GB/en-GB.tpl_isis.ini
+/administrator/language/en-GB/en-GB.tpl_isis.sys.ini
+/administrator/language/en-GB/en-GB.xml
+/administrator/language/en-GB/install.xml
+/administrator/language/overrides/*
+/administrator/language/index.html
+/administrator/logs/*
+/administrator/manifests/files/joomla.xml
+/administrator/manifests/libraries/fof.xml
+/administrator/manifests/libraries/idna_convert.xml
+/administrator/manifests/libraries/joomla.xml
+/administrator/manifests/libraries/phpass.xml
+/administrator/manifests/libraries/phputf8.xml
+/administrator/manifests/packages/pkg_en-GB.xml
+/administrator/manifests/packages/index.html
+/administrator/modules/mod_custom/*
+/administrator/modules/mod_feed/*
+/administrator/modules/mod_latest/*
+/administrator/modules/mod_latestactions/*
+/administrator/modules/mod_logged/*
+/administrator/modules/mod_login/*
+/administrator/modules/mod_menu/*
+/administrator/modules/mod_multilangstatus/*
+/administrator/modules/mod_online/*
+/administrator/modules/mod_popular/*
+/administrator/modules/mod_privacy_dashboard/*
+/administrator/modules/mod_quickicon/*
+/administrator/modules/mod_sampledata/*
+/administrator/modules/mod_stats_admin/*
+/administrator/modules/mod_status/*
+/administrator/modules/mod_submenu/*
+/administrator/modules/mod_title/*
+/administrator/modules/mod_toolbar/*
+/administrator/modules/mod_unread/*
+/administrator/modules/mod_version/*
+/administrator/templates/hathor/*
+/administrator/templates/isis/*
+/administrator/templates/system/*
+/bin/*
+/cache/*
+/cli/*
+/components/com_ajax/*
+/components/com_banners/*
+/components/com_config/*
+/components/com_contact/*
+/components/com_content/*
+/components/com_contenthistory/*
+/components/com_fields/*
+/components/com_finder/*
+/components/com_mailto/*
+/components/com_media/*
+/components/com_menus/*
+/components/com_modules/*
+/components/com_newsfeeds/*
+/components/com_privacy/*
+/components/com_search/*
+/components/com_tags/*
+/components/com_users/*
+/components/com_wrapper/*
+/components/index.html
+/images/banners/*
+/images/headers/*
+/images/sampledata/*
+/images/index.html
+/images/joomla*
+/images/powered_by.png
+/includes/*
+/installation/*
+/language/en-GB/en-GB.com_ajax.ini
+/language/en-GB/en-GB.com_config.ini
+/language/en-GB/en-GB.com_contact.ini
+/language/en-GB/en-GB.com_content.ini
+/language/en-GB/en-GB.com_finder.ini
+/language/en-GB/en-GB.com_mailto.ini
+/language/en-GB/en-GB.com_media.ini
+/language/en-GB/en-GB.com_messages.ini
+/language/en-GB/en-GB.com_newsfeeds.ini
+/language/en-GB/en-GB.com_privacy.ini
+/language/en-GB/en-GB.com_search.ini
+/language/en-GB/en-GB.com_tags.ini
+/language/en-GB/en-GB.com_users.ini
+/language/en-GB/en-GB.com_weblinks.ini
+/language/en-GB/en-GB.com_wrapper.ini
+/language/en-GB/en-GB.files_joomla.sys.ini
+/language/en-GB/en-GB.finder_cli.ini
+/language/en-GB/en-GB.ini
+/language/en-GB/en-GB.lib_fof.ini
+/language/en-GB/en-GB.lib_fof.sys.ini
+/language/en-GB/en-GB.lib_idna_convert.sys.ini
+/language/en-GB/en-GB.lib_joomla.ini
+/language/en-GB/en-GB.lib_joomla.sys.ini
+/language/en-GB/en-GB.lib_phpass.sys.ini
+/language/en-GB/en-GB.lib_phpmailer.sys.ini
+/language/en-GB/en-GB.lib_phputf8.sys.ini
+/language/en-GB/en-GB.lib_simplepie.sys.ini
+/language/en-GB/en-GB.localise.php
+/language/en-GB/en-GB.mod_articles_archive.ini
+/language/en-GB/en-GB.mod_articles_archive.sys.ini
+/language/en-GB/en-GB.mod_articles_categories.ini
+/language/en-GB/en-GB.mod_articles_categories.sys.ini
+/language/en-GB/en-GB.mod_articles_category.ini
+/language/en-GB/en-GB.mod_articles_category.sys.ini
+/language/en-GB/en-GB.mod_articles_latest.ini
+/language/en-GB/en-GB.mod_articles_latest.sys.ini
+/language/en-GB/en-GB.mod_articles_news.ini
+/language/en-GB/en-GB.mod_articles_news.sys.ini
+/language/en-GB/en-GB.mod_articles_popular.ini
+/language/en-GB/en-GB.mod_articles_popular.sys.ini
+/language/en-GB/en-GB.mod_banners.ini
+/language/en-GB/en-GB.mod_banners.sys.ini
+/language/en-GB/en-GB.mod_breadcrumbs.ini
+/language/en-GB/en-GB.mod_breadcrumbs.sys.ini
+/language/en-GB/en-GB.mod_custom.ini
+/language/en-GB/en-GB.mod_custom.sys.ini
+/language/en-GB/en-GB.mod_feed.ini
+/language/en-GB/en-GB.mod_feed.sys.ini
+/language/en-GB/en-GB.mod_finder.ini
+/language/en-GB/en-GB.mod_finder.sys.ini
+/language/en-GB/en-GB.mod_footer.ini
+/language/en-GB/en-GB.mod_footer.sys.ini
+/language/en-GB/en-GB.mod_languages.ini
+/language/en-GB/en-GB.mod_languages.sys.ini
+/language/en-GB/en-GB.mod_login.ini
+/language/en-GB/en-GB.mod_login.sys.ini
+/language/en-GB/en-GB.mod_menu.ini
+/language/en-GB/en-GB.mod_menu.sys.ini
+/language/en-GB/en-GB.mod_random_image.ini
+/language/en-GB/en-GB.mod_random_image.sys.ini
+/language/en-GB/en-GB.mod_related_items.ini
+/language/en-GB/en-GB.mod_related_items.sys.ini
+/language/en-GB/en-GB.mod_search.ini
+/language/en-GB/en-GB.mod_search.sys.ini
+/language/en-GB/en-GB.mod_stats.ini
+/language/en-GB/en-GB.mod_stats.sys.ini
+/language/en-GB/en-GB.mod_syndicate.ini
+/language/en-GB/en-GB.mod_syndicate.sys.ini
+/language/en-GB/en-GB.mod_tags_popular.ini
+/language/en-GB/en-GB.mod_tags_popular.sys.ini
+/language/en-GB/en-GB.mod_tags_similar.ini
+/language/en-GB/en-GB.mod_tags_similar.sys.ini
+/language/en-GB/en-GB.mod_users_latest.ini
+/language/en-GB/en-GB.mod_users_latest.sys.ini
+/language/en-GB/en-GB.mod_weblinks.ini
+/language/en-GB/en-GB.mod_weblinks.sys.ini
+/language/en-GB/en-GB.mod_whosonline.ini
+/language/en-GB/en-GB.mod_whosonline.sys.ini
+/language/en-GB/en-GB.mod_wrapper.ini
+/language/en-GB/en-GB.mod_wrapper.sys.ini
+/language/en-GB/en-GB.tpl_atomic.ini
+/language/en-GB/en-GB.tpl_atomic.sys.ini
+/language/en-GB/en-GB.tpl_beez3.ini
+/language/en-GB/en-GB.tpl_beez3.sys.ini
+/language/en-GB/en-GB.tpl_beez5.ini
+/language/en-GB/en-GB.tpl_beez5.sys.ini
+/language/en-GB/en-GB.tpl_beez_20.ini
+/language/en-GB/en-GB.tpl_beez_20.sys.ini
+/language/en-GB/en-GB.tpl_protostar.ini
+/language/en-GB/en-GB.tpl_protostar.sys.ini
+/language/en-GB/en-GB.xml
+/language/en-GB/install.xml
+/language/overrides/*
+/language/index.html
+/layouts/joomla/*
+/layouts/libraries/*
+/layouts/plugins/*
+/layouts/index.html
+/libraries/cms/*
+/libraries/fof/*
+/libraries/idna_convert/*
+/libraries/joomla/*
+/libraries/legacy/*
+/libraries/php-encryption/*
+/libraries/phpass/*
+/libraries/phpmailer/*
+/libraries/phputf8/*
+/libraries/simplepie/*
+/libraries/src/*
+/libraries/vendor/*
+/libraries/classmap.php
+/libraries/cms.php
+/libraries/import.legacy.php
+/libraries/import.php
+/libraries/index.html
+/libraries/loader.php
+/media/cms/*
+/media/com_associations/*
+/media/com_contact/*
+/media/com_content/*
+/media/com_contenthistory/*
+/media/com_fields/*
+/media/com_finder/*
+/media/com_joomlaupdate/*
+/media/com_menus/*
+/media/com_modules/*
+/media/com_wrapper/*
+/media/contacts/*
+/media/editors/*
+/media/jui/*
+/media/mailto/*
+/media/media/*
+/media/mod_languages/*
+/media/mod_sampledata/*
+/media/overrider/*
+/media/plg_captcha_recaptcha/*
+/media/plg_captcha_recaptcha_invisible/*
+/media/plg_quickicon_extensionupdate/*
+/media/plg_quickicon_joomlaupdate/*
+/media/plg_quickicon_privacycheck/*
+/media/plg_system_highlight/*
+/media/plg_system_stats/*
+/media/plg_twofactorauth_totp/*
+/media/system/*
+/media/index.html
+/modules/mod_articles_archive/*
+/modules/mod_articles_categories/*
+/modules/mod_articles_category/*
+/modules/mod_articles_latest/*
+/modules/mod_articles_news/*
+/modules/mod_articles_popular/*
+/modules/mod_banners/*
+/modules/mod_breadcrumbs/*
+/modules/mod_custom/*
+/modules/mod_feed/*
+/modules/mod_finder/*
+/modules/mod_footer/*
+/modules/mod_languages/*
+/modules/mod_login/*
+/modules/mod_menu/*
+/modules/mod_random_image/*
+/modules/mod_related_items/*
+/modules/mod_search/*
+/modules/mod_stats/*
+/modules/mod_syndicate/*
+/modules/mod_tags_popular/*
+/modules/mod_tags_similar/*
+/modules/mod_users_latest/*
+/modules/mod_whosonline/*
+/modules/mod_wrapper/*
+/modules/index.html
+/plugins/actionlog/joomla/*
+/plugins/authentication/cookie/*
+/plugins/authentication/example/*
+/plugins/authentication/gmail/*
+/plugins/authentication/joomla/*
+/plugins/authentication/ldap/*
+/plugins/captcha/recaptcha/*
+/plugins/captcha/recaptcha_invisible/*
+/plugins/content/confirmconsent/*
+/plugins/content/contact/*
+/plugins/content/emailcloak/*
+/plugins/content/example/*
+/plugins/content/fields/*
+/plugins/content/finder/*
+/plugins/content/geshi/*
+/plugins/content/joomla/*
+/plugins/content/loadmodule/*
+/plugins/content/pagebreak/*
+/plugins/content/pagenavigation/*
+/plugins/content/vote/*
+/plugins/editors/codemirror/*
+/plugins/editors/none/*
+/plugins/editors/tinymce/*
+/plugins/editors-xtd/article/*
+/plugins/editors-xtd/contact/*
+/plugins/editors-xtd/fields/*
+/plugins/editors-xtd/image/*
+/plugins/editors-xtd/menu/*
+/plugins/editors-xtd/module/*
+/plugins/editors-xtd/pagebreak/*
+/plugins/editors-xtd/readmore/*
+/plugins/extension/example/*
+/plugins/extension/joomla/*
+/plugins/fields/calendar/*
+/plugins/fields/checkboxes/*
+/plugins/fields/color/*
+/plugins/fields/editor/*
+/plugins/fields/imagelist/*
+/plugins/fields/integer/*
+/plugins/fields/list/*
+/plugins/fields/media/*
+/plugins/fields/radio/*
+/plugins/fields/repeatable/*
+/plugins/fields/sql/*
+/plugins/fields/text/*
+/plugins/fields/textarea/*
+/plugins/fields/url/*
+/plugins/fields/user/*
+/plugins/fields/usergrouplist/*
+/plugins/finder/categories/*
+/plugins/finder/contacts/*
+/plugins/finder/content/*
+/plugins/finder/newsfeeds/*
+/plugins/finder/tags/*
+/plugins/installer/folderinstaller/*
+/plugins/installer/packageinstaller/*
+/plugins/installer/urlinstaller/*
+/plugins/privacy/actionlogs/*
+/plugins/privacy/consents/*
+/plugins/privacy/contact/*
+/plugins/privacy/content/*
+/plugins/privacy/message/*
+/plugins/privacy/user/*
+/plugins/quickicon/extensionupdate/*
+/plugins/quickicon/joomlaupdate/*
+/plugins/quickicon/phpversioncheck/*
+/plugins/quickicon/privacycheck/*
+/plugins/quickicon/index.html
+/plugins/sampledata/blog/*
+/plugins/search/categories/*
+/plugins/search/contacts/*
+/plugins/search/content/*
+/plugins/search/newsfeeds/*
+/plugins/search/tags/*
+/plugins/search/weblinks/*
+/plugins/search/index.html
+/plugins/system/actionlogs/*
+/plugins/system/cache/*
+/plugins/system/debug/*
+/plugins/system/fields/*
+/plugins/system/highlight/*
+/plugins/system/languagecode/*
+/plugins/system/languagefilter/*
+/plugins/system/log/*
+/plugins/system/logout/*
+/plugins/system/logrotation/*
+/plugins/system/p3p/*
+/plugins/system/privacyconsent/*
+/plugins/system/redirect/*
+/plugins/system/remember/*
+/plugins/system/sef/*
+/plugins/system/sessiongc/*
+/plugins/system/stats/*
+/plugins/system/updatenotification/*
+/plugins/system/index.html
+/plugins/twofactorauth/totp/*
+/plugins/twofactorauth/yubikey/*
+/plugins/user/contactcreator/*
+/plugins/user/example/*
+/plugins/user/joomla/*
+/plugins/user/profile/*
+/plugins/user/terms/*
+/plugins/user/index.html
+/plugins/index.html
+/templates/beez3/*
+/templates/protostar/*
+/templates/system/*
+/templates/index.html
+/tmp/*
+/configuration.php
+/htaccess.txt
+/index.php
+/joomla.xml
+/robots.txt.dist
+/web.config.txt
+
+### Kohana ###
+application/cache/*
+application/logs/*
+
+### Emacs ###
+# -*- mode: gitignore; -*-
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Org-mode
+.org-id-locations
+*_archive
+
+# flymake-mode
+*_flymake.*
+
+# eshell files
+/eshell/history
+/eshell/lastdir
+
+# elpa packages
+/elpa/
+
+# reftex files
+*.rel
+
+# AUCTeX auto folder
+/auto/
+
+# cask packages
+.cask/
+
+# Flycheck
+flycheck_*.el
+
+# server auth directory
+/server/
+
+# projectiles files
+.projectile
+
+# directory configuration
+.dir-locals.el
+
+# network security
+/network-security.data
+
+
+### Laravel ###
+yarn-error.log
+
+# Laravel 4 specific
+bootstrap/compiled.php
+app/storage/
+
+# Laravel 5 & Lumen specific
+public/storage
+public/hot
+
+# Laravel 5 & Lumen specific with changed public path
+public_html/storage
+public_html/hot
+
+storage/*.key
+Homestead.yaml
+Homestead.json
+/.vagrant
+.phpunit.result.cache
+
+### Zsh ###
+# Zsh compiled script + zrecompile backup
+*.zwc
+*.zwc.old
+
+# Zsh completion-optimization dumpfile
+*zcompdump*
+
+# Zsh zcalc history
+.zcalc_history
+
+# A popular plugin manager's files
+._zinit
+.zinit_lstupd
+
+# zdharma/zshelldoc tool's files
+zsdoc/data
+
+# robbyrussell/oh-my-zsh/plugins/per-directory-history plugin's files
+# (when set-up to store the history in the local directory)
+.directory_history
+
+# MichaelAquilina/zsh-autoswitch-virtualenv plugin's files
+# (for Zsh plugins using Python)
+.venv
+
+# Zunit tests' output
+/tests/_output/*
+!/tests/_output/.gitkeep
+
+### Less ###
+*.less
+
+### Linux ###
+
+# temporary files which can be created if a process still has a handle open of a deleted file
+.fuse_hidden*
+
+# KDE directory preferences
+.directory
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+# .nfs files are created when an open file is removed but is still being accessed
+.nfs*
+
+### Lua ###
+# Compiled Lua sources
+luac.out
+
+# luarocks build files
+*.src.rock
+
+# Object files
+*.os
+
+# Precompiled Headers
+
+# Libraries
+*.def
+
+# Shared objects (inc. Windows DLLs)
+
+# Executables
+
+
+### Flask ###
+instance/*
+!instance/.gitignore
+.webassets-cache
+
+### Flask.Python Stack ###
+# Byte-compiled / optimized / DLL files
+*.py[cod]
+*$py.class
+
+# C extensions
+
+# Distribution / packaging
+.Python
+develop-eggs/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.pot
+
+# Django stuff:
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+#   For a library or package, you might want to ignore these files since the code is
+#   intended to run in multiple environments; otherwise, check them in:
+# .python-version
+
+# pipenv
+#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
+#   However, in case of collaboration, if having platform-specific dependencies or dependencies
+#   having no cross-platform support, pipenv may install dependencies that don't work, or not
+#   install all needed dependencies.
+#Pipfile.lock
+
+# poetry
+#   Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version control.
+#   This is especially recommended for binary packages to ensure reproducibility, and is more
+#   commonly ignored for libraries.
+#   https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
+#poetry.lock
+
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# PyCharm
+#  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
+#  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
+#  and can be added to the global gitignore or merged into this file.  For a more nuclear
+#  option (not recommended) you can uncomment the following to ignore the entire idea folder.
+#.idea/
+
+### Magento1 ###
+# gitignore template for Magento v1 projects
+# It is recommended that you use `Magento.gitignore` as this is the latest version
+
+/PATCH_*.sh
+
+/app/etc/local.xml
+
+/media/*
+!/media/.htaccess
+
+!/media/customer
+/media/customer/*
+!/media/customer/.htaccess
+
+!/media/dhl
+/media/dhl/*
+!/media/dhl/logo.jpg
+
+!/media/downloadable
+/media/downloadable/*
+!/media/downloadable/.htaccess
+
+!/media/xmlconnect
+/media/xmlconnect/*
+
+!/media/xmlconnect/custom
+/media/xmlconnect/custom/*
+!/media/xmlconnect/custom/ok.gif
+
+!/media/xmlconnect/original
+/media/xmlconnect/original/*
+!/media/xmlconnect/original/ok.gif
+
+!/media/xmlconnect/system
+/media/xmlconnect/system/*
+!/media/xmlconnect/system/ok.gif
+
+/var/*
+!/var/.htaccess
+
+!/var/package
+/var/package/*
+!/var/package/*.xml
+
+
+### Magento2 ###
+/.buildpath
+/.cache
+/.metadata
+/.project
+/.settings
+/.vscode
+atlassian*
+/nbproject
+/robots.txt
+/pub/robots.txt
+/sitemap
+/sitemap.xml
+/pub/sitemap
+/pub/sitemap.xml
+/.idea
+/.gitattributes
+/app/config_sandbox
+/app/etc/config.php
+/app/etc/env.php
+/app/code/Magento/TestModule*
+/lib/internal/flex/uploader/.actionScriptProperties
+/lib/internal/flex/uploader/.flexProperties
+/lib/internal/flex/uploader/.project
+/lib/internal/flex/uploader/.settings
+/lib/internal/flex/varien/.actionScriptProperties
+/lib/internal/flex/varien/.flexLibProperties
+/lib/internal/flex/varien/.project
+/lib/internal/flex/varien/.settings
+/.grunt
+/Gruntfile.js
+/package.json
+/.php_cs
+/.php_cs.cache
+/grunt-config.json
+/pub/media/*.*
+!/pub/media/.htaccess
+/pub/media/attribute/*
+!/pub/media/attribute/.htaccess
+/pub/media/analytics/*
+/pub/media/catalog/*
+!/pub/media/catalog/.htaccess
+/pub/media/customer/*
+!/pub/media/customer/.htaccess
+/pub/media/downloadable/*
+!/pub/media/downloadable/.htaccess
+/pub/media/favicon/*
+/pub/media/import/*
+!/pub/media/import/.htaccess
+/pub/media/logo/*
+/pub/media/custom_options/*
+!/pub/media/custom_options/.htaccess
+/pub/media/theme/*
+/pub/media/theme_customization/*
+!/pub/media/theme_customization/.htaccess
+/pub/media/wysiwyg/*
+!/pub/media/wysiwyg/.htaccess
+/pub/media/tmp/*
+!/pub/media/tmp/.htaccess
+/pub/media/captcha/*
+/pub/static/*
+!/pub/static/.htaccess
+
+!/vendor/.htaccess
+/generated/*
+!/generated/.htaccess
+
+### Maven ###
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+# https://github.com/takari/maven-wrapper#usage-without-binary-jar
+.mvn/wrapper/maven-wrapper.jar
+
+# Eclipse m2e generated files
+# Eclipse Core
+# JDT-specific (Eclipse Java Development Tools)
+
+### NetBeans ###
+**/nbproject/private/
+**/nbproject/Makefile-*.mk
+**/nbproject/Package-*.bash
+nbbuild/
+nbdist/
+.nb-gradle/
+
+### Node ###
+# Logs
+logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Diagnostic reports (https://nodejs.org/api/report.html)
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Directory for instrumented libs generated by jscoverage/JSCover
+lib-cov
+
+# Coverage directory used by tools like istanbul
+coverage
+*.lcov
+
+# nyc test coverage
+.nyc_output
+
+# Grunt intermediate storage (https://gruntjs.com/creating-plugins#storing-task-files)
+.grunt
+
+# Bower dependency directory (https://bower.io/)
+
+# node-waf configuration
+.lock-wscript
+
+# Compiled binary addons (https://nodejs.org/api/addons.html)
+build/Release
+
+# Dependency directories
+jspm_packages/
+
+# Snowpack dependency directory (https://snowpack.dev/)
+web_modules/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variable files
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+# parcel-bundler cache (https://parceljs.org/)
+.parcel-cache
+
+# Next.js build output
+.next
+out
+
+# Nuxt.js build / generate output
+.nuxt
+dist
+
+# Gatsby files
+.cache/
+# Comment in the public line in if your project uses Gatsby and not Next.js
+# https://nextjs.org/blog/next-9-1#public-directory-support
+# public
+
+# vuepress build output
+.vuepress/dist
+
+# vuepress v2.x temp and cache directory
+.temp
+
+# Docusaurus cache and generated files
+.docusaurus
+
+# Serverless directories
+.serverless/
+
+# FuseBox cache
+.fusebox/
+
+# DynamoDB Local files
+.dynamodb/
+
+# TernJS port file
+.tern-port
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+
+# yarn v2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+### Node Patch ###
+# Serverless Webpack directories
+.webpack/
+
+# Optional stylelint cache
+
+# SvelteKit build / generate output
+.svelte-kit
+
+### Objective-C ###
+# Xcode
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+
+## User settings
+xcuserdata/
+
+## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
+*.xcscmblueprint
+*.xccheckout
+
+## compatibility with Xcode 3 and earlier (ignoring not required starting Xcode 4)
+DerivedData/
+*.moved-aside
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+
+## Obj-C/Swift specific
+*.hmap
+
+## App packaging
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# CocoaPods
+# We recommend against adding the Pods directory to your .gitignore. However
+# you should judge for yourself, the pros and cons are mentioned at:
+# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
+# Pods/
+# Add this line if you want to avoid checking in source code from the Xcode workspace
+# *.xcworkspace
+
+# Carthage
+# Add this line if you want to avoid checking in source code from Carthage dependencies.
+# Carthage/Checkouts
+
+Carthage/Build/
+
+# fastlane
+# It is recommended to not store the screenshots in the git repo.
+# Instead, use fastlane to re-generate the screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://docs.fastlane.tools/best-practices/source-control/#source-control
+
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+
+# Code Injection
+# After new code Injection tools there's a generated folder /iOSInjectionProject
+# https://github.com/johnno1962/injectionforxcode
+
+iOSInjectionProject/
+
+### Objective-C Patch ###
+
+### OSX ###
+# General
+
+# Icon must end with two \r
+
+# Thumbnails
+
+# Files that might appear in the root of a volume
+
+# Directories potentially created on remote AFP share
+
+### Perl ###
+!Build/
+.last_cover_stats
+/META.yml
+/META.json
+/MYMETA.*
+*.pm.tdy
+*.bs
+
+# Devel::Cover
+cover_db/
+
+# Devel::NYTProf
+nytprof.out
+
+# Dist::Zilla
+/.build/
+
+# Module::Build
+Build
+Build.bat
+
+# Module::Install
+inc/
+
+# ExtUtils::MakeMaker
+/blib/
+/_eumm/
+/*.gz
+/Makefile
+/Makefile.old
+/MANIFEST.bak
+/pm_to_blib
+
+### Phalcon ###
+/cache/
+/config/development/
+
+### PHPCodeSniffer ###
+# CodeSniffer
+
+/wpcs/*
+
+### PhpStorm+all ###
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
+# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+
+# User-specific stuff
+
+# AWS User-specific
+
+# Generated files
+
+# Sensitive or high-churn files
+
+# Gradle
+
+# Gradle and Maven with auto-import
+# When using Gradle or Maven with auto-import, you should exclude module files,
+# since they will be recreated, and may cause churn.  Uncomment if using
+# auto-import.
+# .idea/artifacts
+# .idea/compiler.xml
+# .idea/jarRepositories.xml
+# .idea/modules.xml
+# .idea/*.iml
+# .idea/modules
+# *.iml
+# *.ipr
+
+# CMake
+
+# Mongo Explorer plugin
+
+# File-based project format
+
+# IntelliJ
+
+# mpeltonen/sbt-idea plugin
+
+# JIRA plugin
+
+# Cursive Clojure plugin
+
+# SonarLint plugin
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+
+# Editor-based Rest Client
+
+# Android studio 3.1+ serialized cache file
+
+### PhpStorm+all Patch ###
+# Ignore everything but code style settings and run configurations
+# that are supposed to be shared within teams.
+
+
+
+### PHPUnit ###
+# Covers PHPUnit
+# Reference: https://phpunit.de/
+
+# Generated files
+.phpunit.cache
+
+# PHPUnit
+/app/phpunit.xml
+/phpunit.xml
+
+# Build data
+
+### PowerShell ###
+# Exclude packaged modules
+
+# Exclude .NET assemblies from source
+
+### Prestashop ###
+# Cache, temp and personal files
+
+
+# Cache
+!/cache/.htaccess
+!/cache/cachefs/index.php
+!/cache/deprecated.txt
+!/cache/index.php
+!/cache/purifier/index.php
+!/cache/push/activity
+!/cache/push/index.php
+!/cache/push/trends
+!/cache/sandbox/index.php
+!/cache/smarty/cache/index.php
+!/cache/smarty/compile/index.php
+!/cache/smarty/index.php
+!/cache/tcpdf/index.php
+
+# Download
+/download/*
+!/download/.htaccess
+!/download/index.php
+
+# Images
+/img/*
+!/img/.htaccess
+!/img/index.php
+!/img/404.gif
+!/img/bg_500.png
+!/img/bg_loader.png
+!/img/favicon.ico
+!/img/loader.gif
+!/img/loadingAnimation.gif
+!/img/logo.jpg
+!/img/logo.png
+!/img/logo_invoice.jpg
+!/img/logo_stores.png
+!/img/macFFBgHack.png
+!/img/prestashop-avatar.png
+!/img/prestashop@2x.png
+!/img/preston-login-wink@2x.png
+!/img/preston-login@2x.png
+!/img/questionmark.png
+!/img/genders/index.php
+!/img/admin/index.php
+!/img/c/index.php
+!/img/cms/index.php
+!/img/co/index.php
+!/img/jquery-ui
+!/img/l/index.php
+!/img/m/index.php
+!/img/os/index.php
+!/img/p/index.php
+!/img/s/index.php
+!/img/scenes
+!/img/st/index.php
+!/img/su/index.php
+!/img/t/index.php
+!/img/tmp/index.php
+
+# Upload
+/upload/*
+!/upload/.htaccess
+
+/docs/phpdoc-sf/
+/composer.lock
+*.hot-update.js
+*.hot-update.json
+
+
+/admin-dev/autoupgrade/*
+!/admin-dev/autoupgrade/index.php
+!/admin-dev/autoupgrade/backup/index.php
+
+/admin-dev/backups/*
+!/admin-dev/backups/.htaccess
+
+/admin-dev/import/*
+!/admin-dev/import/.htaccess
+!/admin-dev/import/index.php
+
+/admin-dev/export/*
+!/admin-dev/export/.htaccess
+!/admin-dev/export/index.php
+
+# Downloaded RTL files
+/admin-dev/themes/default/css/bundle/default_rtl.css
+/admin-dev/themes/default/css/bundle/shared_rtl.css
+/admin-dev/themes/default/css/font_rtl.css
+/admin-dev/themes/default/css/overrides_rtl.css
+/admin-dev/themes/default/css/vendor/font-awesome/font-awesome_rtl.css
+/admin-dev/themes/default/css/vendor/nv.d3_rtl.css
+/admin-dev/themes/default/css/vendor/titatoggle-min_rtl.css
+/admin-dev/themes/default/public/theme_rtl.css
+/admin-dev/themes/new-theme/css/module/drop_rtl.css
+/admin-dev/themes/new-theme/css/right-sidebar_rtl.css
+
+themes/*/cache/*
+
+# Config
+
+config/settings.inc.php
+config/settings.old.php
+config/xml/*
+config/themes/*
+!config/xml/themes/default.xml
+themes/*/config/settings_*.json
+app/config/parameters.old.yml
+app/config/config.php
+
+# Themes, modules and overrides
+
+modules/*
+override/*
+themes/*/
+!themes/classic
+!themes/_core
+!themes/_libraries
+
+# Vendors and dependencies
+
+php-cs-fixer
+.grunt/*
+
+# Translations and emails templates
+
+translations/*
+mails/*
+!mails/themes/
+!mails/_partials/
+themes/default-bootstrap/lang/*
+themes/default-bootstrap/modules/*/translations/*.php
+themes/default-bootstrap/mails/*
+!themes/default-bootstrap/mails/en/
+themes/default-bootstrap/modules/*/mails/*
+!themes/default-bootstrap/modules/*/mails/en
+
+# MISC
+
+*sitemap.xml
+
+# Symfony
+
+/bin/
+/app/Resources/geoip/GeoLite2-City.mmdb
+/app/Resources/translations/*
+!/app/Resources/translations/default
+/app/config/parameters.yml
+/app/config/parameters.php
+!/var/cache
+/var/cache/*
+!var/cache/.gitkeep
+!/var/logs
+/var/logs/*
+!var/logs/.gitkeep
+!/var/sessions
+/var/sessions/*
+!var/sessions/.gitkeep
+!var/SymfonyRequirements.php
+/web/bundles/
+
+
+### PuTTY ###
+# Private key
+*.ppk
+
+### PyCharm+all ###
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
+# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+
+# User-specific stuff
+
+# AWS User-specific
+
+# Generated files
+
+# Sensitive or high-churn files
+
+# Gradle
+
+# Gradle and Maven with auto-import
+# When using Gradle or Maven with auto-import, you should exclude module files,
+# since they will be recreated, and may cause churn.  Uncomment if using
+# auto-import.
+# .idea/artifacts
+# .idea/compiler.xml
+# .idea/jarRepositories.xml
+# .idea/modules.xml
+# .idea/*.iml
+# .idea/modules
+# *.iml
+# *.ipr
+
+# CMake
+
+# Mongo Explorer plugin
+
+# File-based project format
+
+# IntelliJ
+
+# mpeltonen/sbt-idea plugin
+
+# JIRA plugin
+
+# Cursive Clojure plugin
+
+# SonarLint plugin
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+
+# Editor-based Rest Client
+
+# Android studio 3.1+ serialized cache file
+
+### PyCharm+all Patch ###
+# Ignore everything but code style settings and run configurations
+# that are supposed to be shared within teams.
+
+
+
+### pydev ###
+.pydevproject
+
+### Python ###
+# Byte-compiled / optimized / DLL files
+
+# C extensions
+
+# Distribution / packaging
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+
+# Installer logs
+
+# Unit test / coverage reports
+
+# Translations
+
+# Django stuff:
+
+# Flask stuff:
+
+# Scrapy stuff:
+
+# Sphinx documentation
+
+# PyBuilder
+
+# Jupyter Notebook
+
+# IPython
+
+# pyenv
+#   For a library or package, you might want to ignore these files since the code is
+#   intended to run in multiple environments; otherwise, check them in:
+# .python-version
+
+# pipenv
+#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
+#   However, in case of collaboration, if having platform-specific dependencies or dependencies
+#   having no cross-platform support, pipenv may install dependencies that don't work, or not
+#   install all needed dependencies.
+
+# poetry
+#   Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version control.
+#   This is especially recommended for binary packages to ensure reproducibility, and is more
+#   commonly ignored for libraries.
+#   https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
+
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow
+
+# Celery stuff
+
+# SageMath parsed files
+
+# Environments
+
+# Spyder project settings
+
+# Rope project settings
+
+# mkdocs documentation
+
+# mypy
+
+# Pyre type checker
+
+# pytype static type analyzer
+
+# Cython debug symbols
+
+# PyCharm
+#  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
+#  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
+#  and can be added to the global gitignore or merged into this file.  For a more nuclear
+#  option (not recommended) you can uncomment the following to ignore the entire idea folder.
+
+### Qt ###
+# C++ objects and libs
+
+# Qt-es
+object_script.*.Release
+object_script.*.Debug
+*_plugin_import.cpp
+/.qmake.cache
+/.qmake.stash
+*.pro.user
+*.pro.user.*
+*.qbs.user
+*.qbs.user.*
+*.moc
+moc_*.cpp
+moc_*.h
+qrc_*.cpp
+ui_*.h
+*.qmlc
+*.jsc
+Makefile*
+*build-*
+*.qm
+*.prl
+
+# Qt unit tests
+target_wrapper.*
+
+# QtCreator
+*.autosave
+
+# QtCreator Qml
+*.qmlproject.user
+*.qmlproject.user.*
+
+# QtCreator CMake
+CMakeLists.txt.user*
+
+# QtCreator 4.8< compilation database
+
+# QtCreator local machine specific files for imported projects
+*creator.user*
+
+*_qmlcache.qrc
+
+### react ###
+.DS_*
+**/*.backup.*
+**/*.back.*
+
+node_modules
+
+*.sublime*
+
+psd
+thumb
+sketch
+
+### ReactNative ###
+# React Native Stack Base
+
+.expo
+__generated__
+
+### ReactNative.Android Stack ###
+# Gradle files
+
+# Local configuration file (sdk path, etc)
+
+# Log/OS Files
+
+# Android Studio generated files and folders
+
+# IntelliJ
+
+# Keystore files
+
+# Google Services (e.g. APIs or Firebase)
+
+# Android Profiling
+
+### ReactNative.Buck Stack ###
+buck-out/
+.buckconfig.local
+.buckd/
+.buckversion
+.fakebuckversion
+
+### ReactNative.Gradle Stack ###
+.gradle
+**/build/
+!src/**/build/
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
+
+# Avoid ignore Gradle wrappper properties
+!gradle-wrapper.properties
+
+# Cache of project
+.gradletasknamecache
+
+# Eclipse Gradle plugin generated files
+# Eclipse Core
+# JDT-specific (Eclipse Java Development Tools)
+
+### ReactNative.Linux Stack ###
+
+# temporary files which can be created if a process still has a handle open of a deleted file
+
+# KDE directory preferences
+
+# Linux trash folder which might appear on any partition or disk
+
+# .nfs files are created when an open file is removed but is still being accessed
+
+### ReactNative.Node Stack ###
+# Logs
+
+# Diagnostic reports (https://nodejs.org/api/report.html)
+
+# Runtime data
+
+# Directory for instrumented libs generated by jscoverage/JSCover
+
+# Coverage directory used by tools like istanbul
+
+# nyc test coverage
+
+# Grunt intermediate storage (https://gruntjs.com/creating-plugins#storing-task-files)
+
+# Bower dependency directory (https://bower.io/)
+
+# node-waf configuration
+
+# Compiled binary addons (https://nodejs.org/api/addons.html)
+
+# Dependency directories
+
+# Snowpack dependency directory (https://snowpack.dev/)
+
+# TypeScript cache
+
+# Optional npm cache directory
+
+# Optional eslint cache
+
+# Optional stylelint cache
+
+# Microbundle cache
+
+# Optional REPL history
+
+# Output of 'npm pack'
+
+# Yarn Integrity file
+
+# dotenv environment variable files
+
+# parcel-bundler cache (https://parceljs.org/)
+
+# Next.js build output
+
+# Nuxt.js build / generate output
+
+# Gatsby files
+# Comment in the public line in if your project uses Gatsby and not Next.js
+# https://nextjs.org/blog/next-9-1#public-directory-support
+# public
+
+# vuepress build output
+
+# vuepress v2.x temp and cache directory
+
+# Docusaurus cache and generated files
+
+# Serverless directories
+
+# FuseBox cache
+
+# DynamoDB Local files
+
+# TernJS port file
+
+# Stores VSCode versions used for testing VSCode extensions
+
+# yarn v2
+
+### ReactNative.Xcode Stack ###
+
+## Xcode 8 and earlier
+
+### ReactNative.macOS Stack ###
+# General
+
+# Icon must end with two \r
+
+# Thumbnails
+
+# Files that might appear in the root of a volume
+
+# Directories potentially created on remote AFP share
+
+### Ruby ###
+*.gem
+*.rbc
+/.config
+/coverage/
+/InstalledFiles
+/pkg/
+/spec/reports/
+/spec/examples.txt
+/test/tmp/
+/test/version_tmp/
+/tmp/
+
+# Used by dotenv library to load environment variables.
+# .env
+
+# Ignore Byebug command history file.
+.byebug_history
+
+## Specific to RubyMotion:
+.dat*
+.repl_history
+*.bridgesupport
+build-iPhoneOS/
+build-iPhoneSimulator/
+
+## Specific to RubyMotion (use of CocoaPods):
+# We recommend against adding the Pods directory to your .gitignore. However
+# you should judge for yourself, the pros and cons are mentioned at:
+# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
+# vendor/Pods/
+
+## Documentation cache and generated files:
+/.yardoc/
+/_yardoc/
+/doc/
+/rdoc/
+
+## Environment normalization:
+/.bundle/
+/vendor/bundle
+/lib/bundler/man/
+
+# for a library or gem, you might want to ignore these files since the code is
+# intended to run in multiple environments; otherwise, check them in:
+# Gemfile.lock
+# .ruby-version
+# .ruby-gemset
+
+# unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
+.rvmrc
+
+# Used by RuboCop. Remote config files pulled in from inherit_from directive.
+# .rubocop-https?--*
+
+### Sass ###
+*.css.map
+*.sass.map
+*.scss.map
+
+### SBT ###
+# Simple Build Tool
+# http://www.scala-sbt.org/release/docs/Getting-Started/Directories.html#configuring-version-control
+
+dist/*
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
+.history
+.lib/
+
+### Scala ###
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+
+### SenchaTouch ###
+# Build and Release Folders
+archive/
+
+# sass cache folder
+
+### Serverless ###
+# Ignore build directory
+.serverless
+
+### SourcePawn ###
+# SourcePawn
+*.dll # extensions
+*.so # extensions
+*.smx # plugins
+
+### SSH ###
+**/.ssh/id_*
+**/.ssh/*_id_*
+**/.ssh/known_hosts
+
+### SublimeText ###
+# Cache files for Sublime Text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+
+# Workspace files are user-specific
+*.sublime-workspace
+
+# Project files should be checked into the repository, unless a significant
+# proportion of contributors will probably not be using Sublime Text
+# *.sublime-project
+
+# SFTP configuration file
+sftp-config.json
+sftp-config-alt*.json
+
+# Package control specific files
+Package Control.last-run
+Package Control.ca-list
+Package Control.ca-bundle
+Package Control.system-ca-bundle
+Package Control.cache/
+Package Control.ca-certs/
+Package Control.merged-ca-bundle
+Package Control.user-ca-bundle
+oscrypto-ca-bundle.crt
+bh_unicode_properties.cache
+
+# Sublime-github package stores a github token in this file
+# https://packagecontrol.io/packages/sublime-github
+GitHub.sublime-settings
+
+### SVN ###
+.svn/
+
+### Swift ###
+# Xcode
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+
+
+
+
+
+
+## Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# Swift Package Manager
+# Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
+# Packages/
+# Package.pins
+# Package.resolved
+# *.xcodeproj
+# Xcode automatically generates this directory with a .xcworkspacedata file and xcuserdata
+# hence it is not needed unless you have added a package configuration file to your project
+# .swiftpm
+
+.build/
+
+# CocoaPods
+# We recommend against adding the Pods directory to your .gitignore. However
+# you should judge for yourself, the pros and cons are mentioned at:
+# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
+# Pods/
+# Add this line if you want to avoid checking in source code from the Xcode workspace
+# *.xcworkspace
+
+# Carthage
+# Add this line if you want to avoid checking in source code from Carthage dependencies.
+# Carthage/Checkouts
+
+
+# Accio dependency management
+Dependencies/
+.accio/
+
+# fastlane
+# It is recommended to not store the screenshots in the git repo.
+# Instead, use fastlane to re-generate the screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://docs.fastlane.tools/best-practices/source-control/#source-control
+
+
+# Code Injection
+# After new code Injection tools there's a generated folder /iOSInjectionProject
+# https://github.com/johnno1962/injectionforxcode
+
+
+### Symfony ###
+# Cache and logs (Symfony2)
+/app/cache/*
+/app/logs/*
+!app/cache/.gitkeep
+!app/logs/.gitkeep
+
+# Email spool folder
+/app/spool/*
+
+# Cache, session files and logs (Symfony3)
+
+# Logs (Symfony4)
+/var/log/*
+!var/log/.gitkeep
+
+# Parameters
+/app/config/parameters.ini
+
+# Managed by Composer
+/app/bootstrap.php.cache
+/var/bootstrap.php.cache
+!bin/console
+!bin/symfony_requirements
+
+# Assets and user uploads
+/web/uploads/
+
+# PHPUnit
+
+# Build data
+
+# Composer PHAR
+
+# Backup entities generated with doctrine:generate:entities command
+**/Entity/*~
+
+# Embedded web-server pid file
+/.web-server-pid
+
+### Symfony Patch ###
+/web/css/
+/web/js/
+
+### Tags ###
+# Ignore tags created by etags, ctags, gtags (GNU global) and cscope
+TAGS
+.TAGS
+!TAGS/
+tags
+.tags
+!tags/
+gtags.files
+GTAGS
+GRTAGS
+GPATH
+GSYMS
+cscope.files
+cscope.out
+cscope.in.out
+cscope.po.out
+
+
+### Terraform ###
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# Crash log files
+crash.log
+crash.*.log
+
+# Exclude all .tfvars files, which are likely to contain sensitive data, such as
+# password, private keys, and other secrets. These should not be part of version
+# control as they are data points which are potentially sensitive and subject
+# to change depending on the environment.
+*.tfvars
+*.tfvars.json
+
+# Ignore override files as they are usually used to override resources locally and so
+# are not checked in
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Include override files you do wish to add to version control using negated pattern
+# !example_override.tf
+
+# Include tfplan files to ignore the plan output of command: terraform plan -out=tfplan
+# example: *tfplan*
+
+# Ignore CLI configuration files
+.terraformrc
+terraform.rc
+
+### TortoiseGit ###
+# Project-level settings
+/.tgitconfig
+
+### Vagrant ###
+# General
+.vagrant/
+
+# Log files (if you are creating logs in debug mode, uncomment this)
+# *.log
+
+### Vagrant Patch ###
+*.box
+
+### Vim ###
+# Swap
+[._]*.s[a-v][a-z]
+!*.svg  # comment out if you don't need vector files
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+
+# Session
+Session.vim
+Sessionx.vim
+
+# Temporary
+.netrwhist
+# Auto-generated tag files
+# Persistent undo
+[._]*.un~
+
+### Kotlin ###
+# Compiled class file
+
+# Log file
+
+# BlueJ files
+
+# Mobile Tools for Java (J2ME)
+
+# Package Files #
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+
+### VisualStudioCode ###
+!.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+
+# Built Visual Studio Code Extensions
+*.vsix
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.ionide
+
+# Support for Project snippet scope
+
+### Vue ###
+# gitignore template for Vue.js projects
+# Recommended template: Node.gitignore
+
+# TODO: where does this rule come from?
+docs/_book
+
+# TODO: where does this rule come from?
+test/
+
+### Vuejs ###
+# Recommended template: Node.gitignore
+
+
+### WebStorm+all ###
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
+# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+
+# User-specific stuff
+
+# AWS User-specific
+
+# Generated files
+
+# Sensitive or high-churn files
+
+# Gradle
+
+# Gradle and Maven with auto-import
+# When using Gradle or Maven with auto-import, you should exclude module files,
+# since they will be recreated, and may cause churn.  Uncomment if using
+# auto-import.
+# .idea/artifacts
+# .idea/compiler.xml
+# .idea/jarRepositories.xml
+# .idea/modules.xml
+# .idea/*.iml
+# .idea/modules
+# *.iml
+# *.ipr
+
+# CMake
+
+# Mongo Explorer plugin
+
+# File-based project format
+
+# IntelliJ
+
+# mpeltonen/sbt-idea plugin
+
+# JIRA plugin
+
+# Cursive Clojure plugin
+
+# SonarLint plugin
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+
+# Editor-based Rest Client
+
+# Android studio 3.1+ serialized cache file
+
+### WebStorm+all Patch ###
+# Ignore everything but code style settings and run configurations
+# that are supposed to be shared within teams.
+
+
+
+### Windows ###
+# Windows thumbnail cache files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+
+# Dump file
+*.stackdump
+
+# Folder config file
+[Dd]esktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+
+# Windows shortcuts
+*.lnk
+
+### WordPress ###
+# Core
+# Note: if you want to stage/commit WP core files
+# you can delete this whole section/until Configuration.
+/wp-admin/
+/wp-content/index.php
+/wp-content/languages
+/wp-content/plugins/index.php
+/wp-content/themes/index.php
+/wp-includes/
+/license.txt
+/readme.html
+/wp-*.php
+/xmlrpc.php
+
+# Configuration
+wp-config.php
+
+# Example themes
+/wp-content/themes/twenty*/
+
+# Example plugin
+/wp-content/plugins/hello.php
+
+# Uploads
+/wp-content/uploads/
+
+# Log files
+
+# htaccess
+
+# All plugins
+# Note: If you wish to whitelist plugins,
+# uncomment the next line
+#/wp-content/plugins
+
+# All themes
+# Note: If you wish to whitelist themes,
+# uncomment the next line
+#/wp-content/themes
+
+
+### XamarinStudio ###
+
+### Xcode ###
+
+
+### Xcode Patch ###
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcworkspace/contents.xcworkspacedata
+/*.gcno
+**/xcshareddata/WorkspaceSettings.xcsettings
+
+### yarn ###
+# https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
+
+.yarn/*
+!.yarn/releases
+!.yarn/patches
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+
+# if you are NOT using Zero-installs, then:
+# comment the following lines
+!.yarn/cache
+
+# and uncomment the following lines
+# .pnp.*
+
+### Yii ###
+assets/*
+!assets/.gitignore
+protected/runtime/*
+!protected/runtime/.gitignore
+protected/data/*.db
+themes/classic/views/
+
+### Gradle ###
+
+# Ignore Gradle GUI config
+
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+
+# Avoid ignore Gradle wrappper properties
+
+# Cache of project
+
+# Eclipse Gradle plugin generated files
+# Eclipse Core
+# JDT-specific (Eclipse Java Development Tools)
+
+### AndroidStudio ###
+# Covers files to be ignored for android development using Android Studio.
+
+# Built application files
+*.ap_
+*.aab
+
+# Files for the ART/Dalvik VM
+*.dex
+
+# Java class files
+
+# Generated files
+gen/
+
+# Gradle files
+
+# Signing files
+.signing/
+
+# Local configuration file (sdk path, etc)
+
+# Proguard folder generated by Eclipse
+proguard/
+
+# Log Files
+
+# Android Studio
+/*/build/
+/*/local.properties
+/*/out
+/*/*/build
+/*/*/production
+.navigation/
+
+# Keystore files
+
+# Google Services (e.g. APIs or Firebase)
+# google-services.json
+
+# Android Patch
+
+# External native build folder generated in Android Studio 2.2 and later
+.externalNativeBuild
+
+# NDK
+
+# IntelliJ IDEA
+/out/
+
+# User-specific configurations
+.idea/caches/
+.idea/libraries/
+.idea/shelf/
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/.name
+.idea/compiler.xml
+.idea/copyright/profiles_settings.xml
+.idea/encodings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/scopes/scope_settings.xml
+.idea/dictionaries
+.idea/vcs.xml
+.idea/jsLibraryMappings.xml
+.idea/datasources.xml
+.idea/dataSources.ids
+.idea/sqlDataSources.xml
+.idea/dynamic.xml
+.idea/uiDesigner.xml
+.idea/assetWizardSettings.xml
+.idea/gradle.xml
+.idea/jarRepositories.xml
+.idea/navEditor.xml
+
+# Legacy Eclipse project files
+
+# Mobile Tools for Java (J2ME)
+
+# Package Files #
+
+# virtual machine crash logs (Reference: http://www.java.com/en/download/help/error_hotspot.xml)
+
+## Plugin-specific files:
+
+# mpeltonen/sbt-idea plugin
+
+# JIRA plugin
+
+# Mongo Explorer plugin
+.idea/mongoSettings.xml
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+
+### AndroidStudio Patch ###
+
+!/gradle/wrapper/gradle-wrapper.jar
+
+### VisualStudio ###
+
+# User-specific files
+
+# User-specific files (MonoDevelop/Xamarin Studio)
+
+# Mono auto generated files
+
+# Build results
+
+# Visual Studio 2015/2017 cache/options directory
+# Uncomment if you have tasks that create the project's static files in wwwroot
+
+# Visual Studio 2017 auto generated files
+
+# MSTest test Results
+
+# NUnit
+
+# Build Results of an ATL Project
+
+# Benchmark Results
+
+# .NET Core
+
+# ASP.NET Scaffolding
+
+# StyleCop
+
+# Files built by Visual Studio
+
+# Chutzpah Test files
+
+# Visual C++ cache files
+
+# Visual Studio profiler
+
+# Visual Studio Trace Files
+
+# TFS 2012 Local Workspace
+
+# Guidance Automation Toolkit
+
+# ReSharper is a .NET coding add-in
+
+# TeamCity is a build add-in
+
+# DotCover is a Code Coverage Tool
+
+# AxoCover is a Code Coverage Tool
+
+# Coverlet is a free, cross platform Code Coverage Tool
+
+# Visual Studio code coverage results
+
+# NCrunch
+
+# MightyMoose
+
+# Web workbench (sass)
+
+# Installshield output folder
+
+# DocProject is a documentation generator add-in
+
+# Click-Once directory
+
+# Publish Web Output
+# Note: Comment the next line if you want to checkin your web deploy settings,
+# but database connection strings (with potential passwords) will be unencrypted
+
+# Microsoft Azure Web App publish settings. Comment the next line if you want to
+# checkin your Azure Web App publish settings, but sensitive information contained
+# in these scripts will be unencrypted
+
+# NuGet Packages
+# NuGet Symbol Packages
+# The packages folder can be ignored because of Package Restore
+# except build/, which is used as an MSBuild target.
+# Uncomment if necessary however generally it will be regenerated when needed
+# NuGet v3's project.json files produces more ignorable files
+
+# Microsoft Azure Build Output
+
+# Microsoft Azure Emulator
+
+# Windows Store app package directories and files
+
+# Visual Studio cache files
+# files ending in .cache can be ignored
+# but keep track of directories ending in .cache
+
+# Others
+
+# Including strong name files can present a security risk
+# (https://github.com/github/gitignore/pull/2483#issue-259490424)
+
+# Since there are multiple workflows, uncomment next line to ignore bower_components
+# (https://github.com/github/gitignore/pull/1529#issuecomment-104372622)
+
+# RIA/Silverlight projects
+
+# Backup & report files from converting an old project file
+# to a newer Visual Studio version. Backup files are not needed,
+# because we have git ;-)
+
+# SQL Server files
+
+# Business Intelligence projects
+
+# Microsoft Fakes
+
+# GhostDoc plugin setting file
+
+# Node.js Tools for Visual Studio
+
+# Visual Studio 6 build log
+
+# Visual Studio 6 workspace options file
+
+# Visual Studio 6 auto-generated workspace file (contains which files were open etc.)
+
+# Visual Studio 6 auto-generated project file (contains which files were open etc.)
+
+# Visual Studio 6 workspace and project file (working project files containing files to include in project)
+
+# Visual Studio 6 technical files
+
+# Visual Studio LightSwitch build output
+
+# Paket dependency manager
+
+# FAKE - F# Make
+
+# CodeRush personal settings
+
+# Python Tools for Visual Studio (PTVS)
+
+# Cake - Uncomment if you are using it
+# tools/**
+# !tools/packages.config
+
+# Tabs Studio
+
+# Telerik's JustMock configuration file
+
+# BizTalk build output
+
+# OpenCover UI analysis results
+
+# Azure Stream Analytics local run output
+
+# MSBuild Binary and Structured Log
+
+# NVidia Nsight GPU debugger configuration file
+
+# MFractors (Xamarin productivity tool) working folder
+
+# Local History for Visual Studio
+
+# Visual Studio History (VSHistory) files
+
+# BeatPulse healthcheck temp database
+
+# Backup folder for Package Reference Convert tool in Visual Studio 2017
+
+# Ionide (cross platform F# VS Code tools) working folder
+
+# Fody - auto-generated XML schema
+
+# VS Code files for those working on multiple tools
+
+# Local History for Visual Studio Code
+
+# Windows Installer files from build outputs
+
+# JetBrains Rider
+
+### VisualStudio Patch ###
+# Additional files built by Visual Studio
+
+# End of https://www.toptal.com/developers/gitignore/api/adobe,android,androidstudio,angular,ansible,apachecordova,apachehadoop,aptanastudio,aspnetcore,autotools,batch,bower,c,c++,cakephp,certificates,chocolatey,cmake,coffeescript,composer,cordova,csharp,cypressio,dart,dbeaver,dotenv,dotnetcore,dropbox,drupal,drupal7,drupal8,eclipse,elixir,emacs,erlang,extjs,flask,fsharp,git,go,godot,goland,gpg,gradle,grails,grunt,helm,homebrew,hugo,intellij+all,java,jekyll,jetbrains+all,joomla,kohana,kotlin,laravel,latex,less,linux,lua,macos,magento1,magento2,maven,netbeans,node,objective-c,osx,perl,phalcon,phpcodesniffer,phpstorm+all,phpunit,powershell,prestashop,putty,pycharm+all,pydev,python,qt,react,reactnative,ruby,sass,sbt,scala,senchatouch,serverless,sourcepawn,ssh,sublimetext,svn,swift,symfony,tags,terraform,tortoisegit,vagrant,vim,visualstudio,visualstudiocode,vue,vuejs,webstorm+all,windows,wordpress,xamarinstudio,xcode,yarn,yii,zendframework,zsh.env-e

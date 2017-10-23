@@ -1,0 +1,128 @@
+########################################
+# prompt global settings
+########################################
+
+# document link: https://starship.rs/ja-JP/config/#%E3%83%95%E3%82%9A%E3%83%AD%E3%83%B3%E3%83%95%E3%82%9A%E3%83%88
+# format = "$all"
+format = """
+$username\
+$hostname\
+$shlvl\
+$kubernetes\
+$directory\
+$docker_context\
+$package\
+$cmake\
+$memory_usage\
+$env_var\
+$cmd_duration\
+$custom\
+$line_break\
+$jobs\
+$battery\
+$time\
+$status\n\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\n\
+$character"""
+add_newline = true
+
+########################################
+# prompt detail settings
+########################################
+
+[username]
+disabled = true
+show_always = true
+style_user = "white bold"
+style_root = "white bold"
+# format = "user: [$user]($style) "
+
+[directory]
+truncation_length = 0
+truncate_to_repo = false
+
+## Git settings
+[git_branch]
+style = "bold purple"
+symbol = ""
+format = "[$symbol $branch(:$remote_branch)]($style)"
+truncation_length = 100  # no truncation
+truncation_symbol = "..."
+
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+
+[git_status]
+conflicted = "[❯](dimmed white) [ﲅ conflicted](italic yellow) "
+ahead = "[❯](dimmed white) [×${count} ahead](italic yellow) "
+behind = "[❯](dimmed white) [×${count} behind](italic yellow) "
+diverged = "[❯](dimmed white) [ ×${ahead_count} ×${behind_count} diverged](bold red) "
+up_to_date = "[❯](dimmed white) [ everything up-to-date!](italic green) "
+untracked = "[❯](dimmed white) [×${count}](italic red) "
+stashed = "[❯](dimmed white) [﬒](yellow)"
+modified = "[❯](dimmed white) [×${count}](italic yellow) "
+staged = "[❯](dimmed white) [×${count}](italic green) "
+renamed = "[❯](dimmed white) [×${count}](italic yellow) "
+deleted = "[❯](dimmed white) [×${count}](italic yellow) "
+format = " $all_status$ahead_behind\n"
+
+## Memory
+[memory_usage]
+disabled = false
+symbol = ""
+format = "[❯](bold red)[❯](bold yellow)[❯](bold green) [$symbol]($style) [${ram}( ~ ${swap})]($style) [❯](dimmed white) "
+threshold = 1
+style = "bold dimmed white"
+
+[jobs]
+symbol = "省 "
+threshold = 1
+
+[battery]
+disabled = false
+full_symbol = " "
+charging_symbol = " "
+discharging_symbol = " "
+unknown_symbol = " "
+empty_symbol = " "
+
+[[battery.display]]
+threshold = 20
+style = "bold red"
+
+[[battery.display]] 
+threshold = 50
+style = "bold yellow"
+
+[[battery.display]]
+threshold = 100
+style = "bold green"
+
+[time]
+disabled = false
+format = "[❯](dimmed white) [ $time]($style) "
+style = "bold yellow"
+use_12hr = false
+time_format = "%a%e %b %T"
+utc_time_offset = "+1"
+time_range = "-"  # always: time_range="00:00:00-23:59:59"
+
+[line_break]
+disabled = true # separate prompt into 2 lines
+
+[character]
+disabled = false
+success_symbol = "[](bold green)" 
+error_symbol = "[](bold red) "
+
+[docker_context]
+disabled = false
+symbol = "🐳"
+format = "[$symbol $context](blue bold)"
+style = "blue bold"
+
+[cmd_duration]
+format = "[羽](bold cyan)[took $duration](bold cyan) [❯](dimmed white) "
