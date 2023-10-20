@@ -68,15 +68,10 @@ zplug clear
 ###########################################################
 # Packages
 
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ff00ff,bg=cyan,bold,underline"
-ZPLUG_HOOK_LOAD_WD="wd() { . $ZPLUG_REPOS/mfaerevaag/wd/wd.sh }"
-
 autoload -Uz compinit
 compinit
 
-zplug "plugins/history", from:oh-my-zsh # https://github.com/ohmyzsh/ohmyzsh/blob/master/lib/history.zsh
 zplug "wfxr/forgit", from:github
-zplug "mfaerevaag/wd", defer:2, as:command, use:"wd.sh", hook-load:"$ZPLUG_HOOK_LOAD_WD"
 zplug "peterhurford/up.zsh", defer:2, from:github
 zplug "tysonwolker/iterm-tab-colors", defer:2, from:github
 zplug "zsh-users/zsh-autosuggestions", defer:2, from:github
@@ -135,3 +130,44 @@ export GOSUMDB=off
 
 eval "$(starship init zsh)"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+###########################################################
+# atuin (history)
+
+atuin-setup() {
+  ! hash atuin && return
+  
+  export ATUIN_NOBIND="true"
+  eval "$(atuin init zsh)"
+  fzf-atuin-history-widget() {
+    local selected num
+    setopt localoptions noglobsubst noposixbuiltins pipefail no_aliases 2>/dev/null
+    selected=$(atuin search --cmd-only --limit ${ATUIN_LIMIT:-5000} | tac |
+      FZF_DEFAULT_OPTS="--height ${FZF_TMUX_HEIGHT:-40%} $FZF_DEFAULT_OPTS -n2..,.. --tiebreak=index --bind=ctrl-r:toggle-sort,ctrl-z:ignore $FZF_CTRL_R_OPTS --query=${LBUFFER} +m" fzf)
+    local ret=$?
+    if [ -n "$selected" ]; then
+      # the += lets it insert at current pos instead of replacing
+      LBUFFER+="${selected}"
+    fi
+    zle reset-prompt
+    return $ret
+  }
+  zle -N fzf-atuin-history-widget
+
+  bindkey '^E' _atuin_search_widget
+  bindkey '^R' fzf-atuin-history-widget
+  bindkey '^[[A' fzf-atuin-history-widget
+}
+atuin-setup
+
+bindkey '^ ' autosuggest-accept
+_zsh_autosuggest_strategy_atuin_top() {
+    suggestion=$(atuin search --cmd-only --limit 1 --search-mode prefix $1)
+}
+ZSH_AUTOSUGGEST_STRATEGY=atuin_top
+
+###########################################################
+# Kubectl
+
+export KUBECONFIG=~/.kube/config
+export AWS_PROFILE="TXBTurboshopDeveloperAccess-440308253360"
