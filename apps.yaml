@@ -8,6 +8,7 @@ install:
       - "act"
       - "aircrack-ng"
       - "asciinema"
+      - "atuin"
       - "automake"
       - "autozimu/homebrew-formulas/unison-fsmonitor"
       - "awscli"
@@ -16,6 +17,7 @@ install:
       - "bat"
       - "bitwarden-cli"
       - "composer"
+      - "coreutils"
       - "doctl"
       - "exa"
       - "ffmpeg"
@@ -176,6 +178,7 @@ install:
       - "brew link --overwrite python@3.10"
       - "echo \"y\" | $(brew --prefix)/opt/fzf/install"
       - "git lfs install"
+      - "go install github.com/oklog/ulid/v2/cmd/ulid@latest"
       - "mkdir ~/.nvm"
   pyenv:
     global: 
