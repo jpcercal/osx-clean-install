@@ -20,6 +20,7 @@ install:
       - "coreutils"
       - "doctl"
       - "exa"
+      - "fd"
       - "ffmpeg"
       - "findutils"
       - "fswatch"
@@ -33,6 +34,7 @@ install:
       - "gnu-sed"
       - "go"
       - "golangci-lint"
+      - "howdoi"
       - "hr"
       - "htmlq"
       - "htop"
@@ -66,6 +68,7 @@ install:
       - "terraform"
       - "tldr"
       - "tmux"
+      - "tpm"
       - "tree"
       - "unison"
       - "vim"
@@ -150,7 +153,6 @@ install:
       - "monitorcontrol"
       - "moonlight"
       - "nordvpn"
-      - "numi"
       - "obs"
       - "oracle-jdk"
       - "parsec"
@@ -176,10 +178,13 @@ install:
       - "brew link --overwrite awscli"
       - "brew link --overwrite go"
       - "brew link --overwrite python@3.10"
+      - "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y"
       - "echo \"y\" | $(brew --prefix)/opt/fzf/install"
       - "git lfs install"
       - "go install github.com/oklog/ulid/v2/cmd/ulid@latest"
       - "mkdir ~/.nvm"
+      - "mkdir -p ~/dotfiles/logs/crontab/"
+      - "crontab ~/dotfiles/crontab"
   pyenv:
     global: 
       version: 3.11.1
@@ -196,6 +201,7 @@ install:
     global:
       packages:
         - "neovim"
+        - "prettier"
         - "serverless"
   mas:
     apps:    
@@ -291,11 +297,6 @@ config:
         absolute_path: "~/.vimrc"
 
     - from: 
-        relative_path: ".zsh_history"
-      to: 
-        absolute_path: "~/.zsh_history"
-
-    - from: 
         relative_path: ".zshrc"
       to: 
         absolute_path: "~/.zshrc"
@@ -304,6 +305,11 @@ config:
         relative_path: "starship.toml"
       to: 
         absolute_path: "~/.config/starship.toml"
+
+    - from: 
+        relative_path: "tmux.conf"
+      to: 
+        absolute_path: "~/.config/tmux/tmux.conf"
   dockutil:
     _before:
       reset: true
