@@ -20,6 +20,9 @@ install:
       - "coreutils"
       - "doctl"
       - "exa"
+      - "exiftool"
+      - "fd"
+      - "fdupes"
       - "ffmpeg"
       - "findutils"
       - "fswatch"
@@ -33,6 +36,7 @@ install:
       - "gnu-sed"
       - "go"
       - "golangci-lint"
+      - "howdoi"
       - "hr"
       - "htmlq"
       - "htop"
@@ -66,8 +70,10 @@ install:
       - "terraform"
       - "tldr"
       - "tmux"
+      - "tpm"
       - "tree"
       - "unison"
+      - "urlwatch"
       - "vim"
       - "watch"
       - "watchexec"
@@ -84,6 +90,7 @@ install:
       - "appcleaner"
       - "authy"
       - "balena-cli"
+      - "brave-browser"
       - "discord"
       - "docker"
       - "dropbox"
@@ -140,6 +147,7 @@ install:
       - "font-victor-mono-nerd-font"
       - "google-chrome"
       - "hiddenbar"
+      - "hoppscotch"
       - "hpedrorodrigues/tools/dockutil" # temporary solution https://github.com/kcrawford/dockutil/issues/127
       - "imageoptim"
       - "iterm2"
@@ -149,13 +157,12 @@ install:
       - "macs-fan-control"
       - "monitorcontrol"
       - "moonlight"
+      - "mysqlworkbench"
       - "nordvpn"
-      - "numi"
       - "obs"
       - "oracle-jdk"
       - "parsec"
       - "pocket-casts"
-      - "postman"
       - "sequel-ace"
       - "shottr"
       - "skype"
@@ -176,10 +183,13 @@ install:
       - "brew link --overwrite awscli"
       - "brew link --overwrite go"
       - "brew link --overwrite python@3.10"
+      - "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y"
       - "echo \"y\" | $(brew --prefix)/opt/fzf/install"
       - "git lfs install"
       - "go install github.com/oklog/ulid/v2/cmd/ulid@latest"
       - "mkdir ~/.nvm"
+      - "mkdir -p ~/dotfiles/logs/crontab/"
+      - "crontab ~/dotfiles/crontab"
   pyenv:
     global: 
       version: 3.11.1
@@ -196,6 +206,7 @@ install:
     global:
       packages:
         - "neovim"
+        - "prettier"
         - "serverless"
   mas:
     apps:    
@@ -215,14 +226,10 @@ install:
         name: "Fantastical 2" 
       - id: "412448059" 
         name: "ForkLift" 
-      - id: "553245401" 
-        name: "Friendly Streaming" 
       - id: "682658836" 
         name: "GarageBand" 
       - id: "668208984" 
         name: "Giphy Capture" 
-      - id: "975890633" 
-        name: "HotKey" 
       - id: "775737590" 
         name: "iA Writer" 
       - id: "408981434" 
@@ -239,10 +246,6 @@ install:
         name: "Numbers" 
       - id: "409201541" 
         name: "Pages" 
-      - id: "568494494" 
-        name: "Pocket" 
-      - id: "880001334" 
-        name: "Reeder" 
       - id: "1153157709"
         name: "Speedtest" 
       - id: "1278508951"
@@ -291,11 +294,6 @@ config:
         absolute_path: "~/.vimrc"
 
     - from: 
-        relative_path: ".zsh_history"
-      to: 
-        absolute_path: "~/.zsh_history"
-
-    - from: 
         relative_path: ".zshrc"
       to: 
         absolute_path: "~/.zshrc"
@@ -304,6 +302,11 @@ config:
         relative_path: "starship.toml"
       to: 
         absolute_path: "~/.config/starship.toml"
+
+    - from: 
+        relative_path: "tmux.conf"
+      to: 
+        absolute_path: "~/.config/tmux/tmux.conf"
   dockutil:
     _before:
       reset: true
