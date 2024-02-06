@@ -11,6 +11,82 @@ ab:
       command: |
         ab -n 1000 -c 2 https://jpcercal.com/
 
+brew:
+  description: |
+    homebrew is the easiest and most flexible way to install the UNIX tools
+    Apple didn't include with macOS. It can also install software not packaged
+    for your Linux distribution without requiring sudo.
+  commands:
+    - description: |
+        install the package with the given name.
+      command: |
+        brew install --cask <cask-name>
+    - description: |
+        list all the installed packages.
+      command: |
+        brew list
+    - description: |
+        uninstall the package with the given name.
+      command: |
+        brew uninstall <package-name>
+    - description: |
+        update the package with the given name.
+      command: |
+        brew upgrade <package-name>
+    - description: |
+        update all the installed packages.
+      command: |
+        brew upgrade
+    - description: |
+        update the homebrew package manager.
+      command: |
+        brew update
+    - description: |
+        update the homebrew package manager and all the installed packages.
+      command: |
+        brew update && brew upgrade
+
+cargo:
+  description: |
+    cargo is a package manager for Rust.
+  commands:
+    - description: |
+        list all the available cargo commands.
+      command: |
+        cargo --list
+    - description: |
+        add the package with the given name to the current project.
+      command: |
+        cargo add <package-name>
+    - description: |
+        install the package with the given name.
+      command: |
+        cargo install <package-name>
+    - description: |
+        build the current project.
+      command: |
+        cargo build
+    - description: |
+        check the current project for errors.
+      command: |
+        cargo check
+    - description: |
+        run the current project.
+      command: |
+        cargo run
+    - description: |
+        format the current project.
+      command: |
+        cargo fmt
+    - description: |
+        create a new cargo project with the given name.
+      command: |
+        cargo new <project-name>
+    - description: |
+        test the current project.
+      command: |
+        cargo test
+
 cat:
   description: |
     concatenate files and print on the standard output.
@@ -36,6 +112,21 @@ cat:
       command: |
         cat ~/.zshrc
 
+cd:
+  description: |
+    the cd command allows you to move between directories. The cd command takes
+    an argument, usually the name of the folder you want to move to, so the full
+    command is cd your-directory.
+  commands:
+    - description: |
+        change the current directory to the ~/projects directory.
+      command: |
+        cd ~/projects
+    - description: |
+        change the current directory to the ~/dotfiles directory.
+      command: |
+        cd ~/dotfiles
+
 composer:
   description: |
     composer is a tool for dependency management in PHP. It allows you to
@@ -59,6 +150,33 @@ composer:
         vendor.
       command: |
         composer install
+
+curl:
+  description: |
+    curl is a command-line tool for transferring data specified with URL syntax.
+  commands:
+    - description: |
+        make a GET request to the localhost:3000/users endpoint and print the
+        response in a human-readable format.
+      command: |
+        curl --request GET --url http://localhost:3000/users | jq '.data'
+    - description: |
+        make a POST request to the localhost:3000/users endpoint with the
+        content-type application/json and the data '{"name": "John Doe", "email": "john.doe@example.com"}'
+      command: |
+        curl --request POST 
+          --url http://localhost:3000/users 
+          --header 'Content-Type: application/json' 
+          --data '{"name": "John Doe", "email": "john.doe@example.com"}'
+
+date:
+  description: |
+    display the current time in the given format.
+  commands:
+    - description: |
+        print the current date in the format `YYYY.MM.DD HH.MM.SS`.
+      command: |
+        date '+%Y.%m.%d %H.%M.%S'
 
 docker:
   description: |
@@ -100,11 +218,17 @@ docker:
         it creates a volume with the content of the current directory onto /data
         and gain access to the container bash after all.
       command: |
-        docker run --rm -it -v "$(pwd)":/data ubuntu:latest bash
+        docker run --rm -it -v "$(pwd)":/data -w /data ubuntu:latest bash
     - description: |
-        stop all the containers that are running at the moment, remove all
-        containers, remove all available network interfaces, remove all the
-        docker images.
+        stop all the running containers and remove all the containers, volumes, and networks.
+      command: |
+        docker stop $(docker ps -aq) &&
+        docker rm $(docker ps -aq);
+        docker volume rm $(docker volume ls -q);
+        docker network rm $(docker networkls -q)
+    - description: |
+        stop all the running containers, remove all the containers, volumes and
+        networks and remove all the images.
       command: |
         docker stop $(docker ps -aq) &&
         docker rm $(docker ps -aq);
@@ -119,7 +243,557 @@ docker:
         call docker-compose to spin up all the containers while removing all
         the orphans.
       command: |
-        docker-compose up --remove-orphans
+        docker compose up --remove-orphans
+    - description: |
+        call docker-compose to spin up all the containers while removing all
+        the orphans, volumes and rebuilding all the images.
+      command: |
+        docker compose up --remove-orphans --volumes --build
+
+du:
+  description: |
+    estimate file space usage.
+  commands:
+    - description: |
+        print the size of the current directory in a human-readable format.
+      command: |
+        du -sh .
+
+echo:
+  description: |
+    write arguments to the standard output.
+  commands:
+    - description: |
+        print a md5 hash of a given string.
+      command: |
+        echo jpcercal | md5
+
+fdupes:
+  description: |
+    identify or delete duplicate files.
+  commands:
+    - description: |
+        find and delete all the duplicate files in the ./photos/flattened
+        directory.
+      command: |
+        fdupes --size --delete --noprompt --recurse ./photos/flattened
+
+ffmpeg:
+  description: |
+    ffmpeg is a very fast video and audio converter that can also grab from a
+    live audio/video source.
+  commands:
+    - description: |
+        convert the input-filename.gif to a mp4 file with the faststart flag
+        turned on, the pixel format set to yuv420p and the video scaled to the
+        nearest even number.
+      command: |
+        ffmpeg -i input-filename.gif -movflags faststart -pix_fmt yuv420p -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2" 
+
+find:
+  description: |
+    walk a file hierarchy.
+  commands:
+    - description: |
+        find recursively any file with the extension .php thaat contains on its
+        content the regex class.*?Cest
+      command: |
+        find . -type f \( -name '*.php' \) -exec grep -EH '\class.*?Cest' {} \;
+
+for:
+  description: |
+    loop command.
+  commands:
+    - description: |
+        print the string "row #${i} - $(date)" 10 times.
+      command: |
+        for i in {1..10}; do
+          echo "row #${i} - $(date)"
+        done
+
+fuser:
+  description: |
+    identify processes using files or sockets.
+  commands:
+    - description: |
+        print the process id of the process using the port 3000.
+      command: |
+        fuser 3000/tcp
+
+gem:
+  description: |
+    gem is a package manager for the Ruby programming language.
+  commands:
+    - description: |
+        install the package with the given name.
+      command: |
+        gem install <package-name>
+    - description: |
+        list all the installed gems.
+      command: |
+        gem list
+    - description: |
+        uninstall the package with the given name.
+      command: |
+        gem uninstall <package-name>
+    - description: |
+        update the package with the given name.
+      command: |
+        gem update <package-name>
+    - description: |
+        update all the installed gems.
+      command: |
+        gem update
+    - description: |
+        update the gem package manager.
+      command: |
+        gem update --system
+
+git:
+  description: |
+    git is a free and open source distributed version control system designed to
+    handle everything from small to very large projects with speed and
+    efficiency.
+  commands:
+    - description: |
+        remove all local git branches except the ones being filtered out.
+      command: |
+        git branch --list
+         | egrep --invert-match "(master|main|develop|\*)"
+         | xargs git branch -D
+    - description: |
+        restore all working tree files to the latest commited state.
+      command: |
+        git checkout -- .
+    - description: |
+        restore all working tree files to the latest commited state and
+        unstage all the staged files.
+      command: |
+        git checkout -
+    - description: |
+        record changes to the repository ammending it to the last
+        commit and does not stop for editing the commit message.
+      command: |
+        git commit --amend --no-edit
+    - description: |
+        apply to the git client the global configuration for `user.email`.
+      command: |
+        git config --global user.email "jpcercal@gmail.com"
+    - description: |
+        apply to the git client the global configuration for `user.name`.
+      command: |
+        git config --global user.name "João Paulo Cercal"
+    - description: |
+        show changes between commits, commit and working tree, etc.
+      command: |
+        git diff
+    - description: |
+        git diff of all the staged changes for the next commit relative
+        to the last commit.
+      command: |
+        git diff --cached
+    - description: |
+        git diff of all the staged changes for the next commit relative
+        to the last commit with the ability to select the files to be
+        commited.
+      command:
+        git diff $@ --name-only --cached | fzf -m --ansi --preview "git diff $@ --cached --color=always"
+    - description: |
+        clean up of the main branch with the latest changes from the remote
+        branch.
+      command: |
+        git fetch --all --prune &&
+        git checkout main &&
+        git reset --hard origin/main &&
+        git checkout -
+    - description: |
+        abort the process started by git rebase.
+      command: |
+        git rebase --abort
+    - description: |
+        continue the process started by git rebase.
+      command: |
+        git rebase --continue
+    - description: |
+        skip the process started by git rebase.
+      command: |
+        git rebase --skip
+    - description: |
+        start the process of git rebase with the last 5 commits.
+      command: |
+        git rebase -i HEAD~5
+    - description: |
+        rebase the current branch with the main branch from the remote.
+      command: |
+        git rebase origin/main
+    - description: |
+        list all the remotes of the current git repository.
+      command: |
+        git remote -v
+    - description: |
+        restore all the staged changes of the current working tree.
+      command: |
+        git restore --staged .
+    - description: |
+        restore all the changes of the current working tree.
+      command: |
+        git restore .
+    - description: |
+        stash all the changes of the current working tree.
+      command: |
+        git stash
+    - description: |
+        apply the last stash to the current working tree.
+      command: |
+        git stash pop
+    - description: |
+        show the status of the current git repository.
+      command: |
+        git status
+
+go:
+  description: |
+    go is an open source programming language that makes it simple to build
+    secure, scalable systems.
+  commands:
+    - description: |
+        download and install all the dependencies of the current project.
+      command: |
+        go get -v ./...
+    - description: |
+        tidy up the go.mod file of the current project.
+      command: |
+        go mod tidy -v
+    - description: |
+        download all the dependencies of the current project.
+      command: |
+        go mod download
+    - description: |
+        format all the files of the current project.
+      command: |
+        gofmt -e -d -s -w ./...
+    - description: |
+        format all the files of the current project and fix the imports.
+      command: |
+        goimports -w ./
+    - description: |
+        run all the tests of the current project.
+      command: |
+        go test -timeout 30s -v -run ./...
+    - description: |
+        run all the tests of the current project with coverage.
+      command: |
+        go test -race -covermode atomic -coverprofile=covprofile.out -v ./...
+    - description: |
+        show the coverage of the current project based on the covprofile.out file.
+      command: |
+        go tool cover -func=covprofile.out -move atomic
+    - description: |
+        run the linter of the current project with the golangci-lint using the verbose flag.
+      command: |
+        golangci-lint run -v
+
+head:
+  description: |
+    display first lines of a file.
+  commands:
+    - description: |
+        print the first 30 lines of the ~/.zsh_history file.
+      command: |
+        head -30 ~/.zsh_history
+
+hostname:
+  description: |
+    set or print name of current host system.
+  commands:
+    - description: |
+        print the hostname of the current system.
+      command: |
+        hostname
+
+http:
+  description: |
+    HTTPie: modern, user-friendly command-line HTTP client for the API era.
+  commands:
+    - description: |
+        make a GET request to the localhost:3000/users endpoint, following 
+        the redirects and using the basic authentication with the username 
+        and password.
+      command: |
+        http
+          --follow
+          --auth-type basic
+          --auth username:pwd
+          "https://localhost/"
+    - description: |
+        make a GET request to the yahoo finance API to get the current price
+        of the BCFF11.SA stock.
+      command: |
+        http --follow
+          GET "https://query1.finance.yahoo.com/v8/finance/chart/BCFF11.SA" | jq '.chart.result[0].meta.regularMarketPrice'
+    - description: |
+        make a GET request to the localhost:3000/users endpoint with the
+        content-type application/json and print the response in a human-readable
+        format.
+      command: |
+        http --follow
+          GET "http://localhost:3000/users" | jq
+    - description: |
+        make a POST request to the localhost:3000/users endpoint with the
+        content-type application/json and the data 
+        '{ "name": "John Doe", "email": "john.doe@exampled.com" }' and print 
+        the response in a human-readable format.
+      command: |
+        http --follow
+          POST "http://localhost:3000/users" 
+          --raw '{ "name": "John Doe", "email": "john.doe@exampled.com" }' | jq
+
+kill:
+  description: |
+    terminate or signal a process.
+  commands:
+    - description: |
+        kill the process with the pid 123 using the SIGTERM signal.
+      command: |
+        kill SIGTERM 123
+
+kubernetes:
+  description: |
+    kubectl controls the Kubernetes cluster manager.
+  commands:
+    - description: |
+        print the current context of the kubernetes cluster.
+      command: |
+        kubectl config current-context
+    - description: |
+        list all available Kubernetes context names.
+      command: |
+        kubectl config view | yq '.contexts[].name'
+    - description: |
+        get all the available contexts of the kubernetes cluster.
+      command: |
+        kubectl config get-contexts
+    - description: |
+        list all available Kubernetes context names.
+      command: |
+        kubectl config view | yq '.contexts[].name'
+    - description: |
+        switch Kubernetes Context.
+      command: |
+        kubectl config use-context <context-name>
+    - description: |
+        get all the namespaces of the kubernetes cluster.
+      command: |
+        kubectl get namespace
+    - description: |
+        get all the pods of the kubernetes cluster.
+      command: |
+        kubectl get pods
+    - description: |
+        execute a command in a pod of the kubernetes cluster.
+      command: |
+        kubectl exec -it <pod-name> bash
+    - description: |
+        port forward the port 5432 of the kubernetes cluster to the local port 5432.
+      command: |
+        kubectl port-forward <pod-name> 5432:5432
+
+kubens:
+  description: |
+    kubens is a utility to switch between Kubernetes namespaces.
+  commands:
+    - description: |
+        list all the available namespaces.
+      command: |
+        kubens
+    - description: |
+        switch to the namespace with the given name.
+      command: |
+        kubens <namespace-name>
+
+last:
+  description: |
+    indicate last logins of users and ttys.
+  commands:
+    - description: |
+        print the last reboot of the system.
+      command: |
+        last reboot
+
+ls:
+  description: |
+    list directory contents.
+  commands:
+    - description: |
+        list the content of the current directly in a list, human-readable
+        including all the hidden files.
+      command: |
+        ls -lha
+    - description: |
+        list only the filenames of the current directory.
+      command: |
+        ls -l | awk '{ print $9 }' 
+
+lsof:
+  description: |
+    list open files.
+  commands:
+    - description: |
+        check if the port 3000 is being used by any process.
+      command: |
+        lsof -i tcp:3000
+    - description: |
+        check if the port 80 is being used by any process.
+      command: |
+        lsof -i tcp:80
+
+magick:
+  description: |
+    convert between image formats as well as resize an image, blur, crop,
+    despeckle, dither, draw on, flip, join, re-sample, and much more.
+  commands:
+    - description: |
+        convert all the .heic files to .jpg files.
+      command: |
+        magick mogrify -monitor -format jpg "*.[hH][eE][iI][cC]"
+
+nc:
+  description: |
+    arbitrary TCP and UDP connections and listens
+  commands:
+    - description: |
+        listen to the port 9200.
+      command: |
+        nc -z elasticsearch 9200
+    - description: |
+        listen to the port 6379.
+      command: |
+        nc -z redis 6379
+
+ngrok:
+  description: |
+    ngrok is a secure unified ingress platform that combines your reverse proxy,
+    firewall, API gateway and global load balancing into a production service.
+  commands:
+    - description: |
+        start a ngrok tunnel to the port 80.
+      command: |
+        ngrok http 80
+
+nmap:
+  description: |
+    network exploration tool and security / port scanner.
+  commands:
+    - description: |
+        scan the network
+      command: |
+        nmap -sP 192.168.1.0/24
+
+node:
+  description: |
+    server-side JavaScript runtime.
+  commands:
+    - description: |
+        login to the npm registry with the legacy auth type.
+      command: |
+        npm login --registry http://npm.domain.dev --auth-type legacy
+    - description: |
+        run the build command of the current project defined on the package.json file.
+      command: |
+        npm run build
+    - description: |
+        run the test command of the current project defined on the package.json file
+        with the u flag turned on.
+      command: |
+        npm run test -- -u
+
+nvim:
+  description: |
+    nvim is a text editor based on Vim.
+  commands:
+    - description: |
+        open the /etc/hosts file with nvim.
+      command: |
+        nvim /etc/hosts
+    - description: |
+        open the ~/.composer/auth.json file with nvim.
+      command: |
+        nvim ~/.composer/auth.json
+    - description: |
+        open the ~/.gitconfig file with nvim.
+      command: |
+        nvim ~/.gitconfig
+    - description: |
+        open the ~/.ssh/known_hosts file with nvim.
+      command: |
+        nvim ~/.ssh/known_hosts
+    - description: |
+        open the ~/.zsh_history file with nvim.
+      command: |
+        nvim ~/.zsh_history
+
+pbcopy:
+  description: |
+    pbcopy, pbpaste - provide copying and pasting to the pasteboard (the
+    Clipboard) from command line.
+  commands:
+    - description: |
+        copy the content of the ~/.ssh/id_rsa.pub file to the clipboard.
+      command: |
+        pbcopy < ~/.ssh/id_rsa.pub && cat ~/.ssh/id_rsa.pub
+
+ping:
+  description: |
+    send ICMP ECHO_REQUEST packets to network hosts.
+  commands:
+    - description: |
+        ping a website to check if it's up and running.
+      command: |
+        ping google.com
+
+plumber:
+  description: |
+    plumber is a CLI devtool for inspecting, piping, messaging and redirecting
+    data in message systems like Kafka, RabbitMQ , GCP PubSub and many more.
+  commands:
+    - description: |
+        read the aws-sqs queue_name with the auto-delete flag turned on.
+      command: |
+        plumber read aws-sqs
+          -f
+          --queue-name=queue_name
+          --auto-delete
+          --aws-region=eu-central-1
+          --aws-access-key-id=AKIASFYAHAJW5NPOUYED
+          --aws-secret-access-key=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
+    - description: |
+        read the kafka migrations topic with the follow and json flags turned on.
+      command: |
+        plumber read kafka
+          --topic migrations
+          --address="localhost:55001"
+          --follow
+          --json
+    - description: |
+        write the kafka migrations topic with the input-data specified.
+      command: |
+        plumber write kafka
+          --address="localhost:55001"
+          --topic migrations
+          --input-data '{"hello":"world"}'
+
+rm:
+  description: |
+    remove directory entries.
+  commands:
+    - description: |
+        force remove the vendor directory.
+      command: |
+        rm -Rf vendor
+    - description: |
+        force remove the node_modules directory.
+      command: |
+        rm -Rf node_modules
 
 ls:
   description: |
@@ -239,354 +913,12 @@ spryker:
       command: |
          docker/sdk testing -x codecept run -g ClassNameTest
 
-echo:
-  description: |
-    write arguments to the standard output.
-  commands:
-    - description: |
-        print a md5 hash of a given string.
-      command: |
-        echo jpcercal | md5
-
-find:
-  description: |
-    walk a file hierarchy.
-  commands:
-    - description: |
-        find recursively any file with the extension .php thaat contains on its
-        content the regex class.*?Cest
-      command: |
-        find . -type f \( -name '*.php' \) -exec grep -EH '\class.*?Cest' {} \;
-
-git:
-  description: |
-    git is a free and open source distributed version control system designed to
-    handle everything from small to very large projects with speed and
-    efficiency.
-  commands:
-    - description: |
-        remove all local git branches except the ones being filtered out.
-      command: |
-        git branch --list
-         | egrep --invert-match "(master|main|develop|\*)"
-         | xargs git branch -D
-    - description: |
-        restore all working tree files to the latest commited state.
-      command: |
-        git checkout -- .
-    - description: |
-        record changes to the repository ammending it to the last
-        commit and does not stop for editing the commit message.
-      command: |
-        git commit --amend --no-edit
-    - description: |
-        apply to the git client the global configuration for `user.email`.
-      command: |
-        git config --global user.email "jpcercal@gmail.com"
-    - description: |
-        apply to the git client the global configuration for `user.name`.
-      command: |
-        git config --global user.name "João Paulo Cercal"
-    - description: |
-        show changes between commits, commit and working tree, etc.
-      command: |
-        git diff
-    - description: |
-        git diff of all the staged changes for the next commit relative
-        to the last commit.
-      command: |
-        git diff --cached
-    - description: |
-        clean up of the main branch with the latest changes from the remote
-        branch.
-      command: |
-        git fetch --all --prune &&
-        git checkout main &&
-        git reset --hard origin/main &&
-        git checkout -
-    - description: |
-        abort the process started by git rebase.
-      command: |
-        git rebase --abort
-    - description: |
-        continue the process started by git rebase.
-      command: |
-        git rebase --continue
-    - description: |
-        <description-of-the-command-here>
-      command: |
-        git rebase --skip
-    - description: |
-        <description-of-the-command-here>
-      command: |
-        git rebase -i HEAD~5
-    - description: |
-        <description-of-the-command-here>
-      command: |
-        git rebase origin/main
-    - description: |
-        <description-of-the-command-here>
-      command: |
-        git remote -v
-    - description: |
-        <description-of-the-command-here>
-      command: |
-        git restore --staged .
-    - description: |
-        <description-of-the-command-here>
-      command: |
-        git restore .
-    - description: |
-        <description-of-the-command-here>
-      command: |
-        git stash
-    - description: |
-        <description-of-the-command-here>
-      command: |
-        git stash pop
-    - description: |
-        <description-of-the-command-here>
-      command: |
-        git status
-
-go:
-  description: |
-    go is an open source programming language that makes it simple to build
-    secure, scalable systems.
-  commands:
-    - description: |
-        <description-of-the-command-here>
-      command: |
-        go get -v ./...
-    - description: |
-        <description-of-the-command-here>
-      command: |
-        go mod tidy -v
-    - description: |
-        <description-of-the-command-here>
-      command: |
-        gofmt -e -d -s -w ./...
-    - description: |
-        <description-of-the-command-here>
-      command: |
-        goimports -w ./
-head:
-  description: |
-    display first lines of a file.
-  commands:
-    - description: |
-        <description-of-the-command-here>
-      command: |
-        head -30 ~/.zsh_history
-
-http:
-  description: |
-    HTTPie: modern, user-friendly command-line HTTP client for the API era.
-  commands:
-    - description: |
-        <description-of-the-command-here>
-      command: |
-        http
-          --follow
-          --auth-type basic
-          --auth username:pwd
-          "https://localhost/?id=1"
-
-kill:
-  description: |
-    terminate or signal a process.
-  commands:
-    - description: |
-        <description-of-the-command-here>
-      command: |
-        kill SIGTERM 123
-
-kubernetes:
-  description: |
-    kubectl controls the Kubernetes cluster manager.
-  commands:
-    - description: |
-        <description-of-the-command-here>
-      command: |
-        kubectl config current-context
-    - description: |
-        list all available Kubernetes context names.
-      command: |
-        kubectl config view | yq '.contexts[].name'
-    - description: |
-        switch Kubernetes Context.
-      command: |
-        kubectl config use-context <context-name>
-    - description: |
-        <description-of-the-command-here>
-      command: |
-        kubectl get
-    - description: |
-        <description-of-the-command-here>
-      command: |
-        kubectl get namespace
-    - description: |
-        <description-of-the-command-here>
-      command: |
-        kubectl get pods
-    - description: |
-        <description-of-the-command-here>
-      command: |
-        kubens
-
-magick:
-  description: |
-    convert between image formats as well as resize an image, blur, crop,
-    despeckle, dither, draw on, flip, join, re-sample, and much more.
-  commands:
-    - description: |
-        <description-of-the-command-here>
-      command: |
-        magick mogrify -monitor -format jpg "*.[hH][eE][iI][cC]"
-
-nc:
-  description: |
-    arbitrary TCP and UDP connections and listens
-  commands:
-    - description: |
-        <description-of-the-command-here>
-      command: |
-        nc -z elasticsearch 9200
-    - description: |
-        <description-of-the-command-here>
-      command: |
-        nc -z redis 6379
-
-ngrok:
-  description: |
-    ngrok is a secure unified ingress platform that combines your reverse proxy,
-    firewall, API gateway and global load balancing into a production service.
-  commands:
-    - description: |
-        <description-of-the-command-here>
-      command: |
-        ngrok http 80
-
-nmap:
-  description: |
-    network exploration tool and security / port scanner.
-  commands:
-    - description: |
-        <description-of-the-command-here>
-      command: |
-        nmap -sP 192.168.1.0/24
-
-node:
-  description: |
-    server-side JavaScript runtime.
-  commands:
-    - description: |
-        <description-of-the-command-here>
-      command: |
-        npm login --registry http://npm.domain.dev --auth-type legacy
-    - description: |
-        <description-of-the-command-here>
-      command: |
-        npm run build
-    - description: |
-        <description-of-the-command-here>
-      command: |
-        npm run test -- -u
-
-nvim:
-  description: |
-    nvim is a text editor based on Vim.
-  commands:
-    - description: |
-        <description-of-the-command-here>
-      command: |
-        nvim /etc/hosts
-    - description: |
-        <description-of-the-command-here>
-      command: |
-        nvim ~/.composer/auth.json
-    - description: |
-        <description-of-the-command-here>
-      command: |
-        nvim ~/.gitconfig
-    - description: |
-        <description-of-the-command-here>
-      command: |
-        nvim ~/.ssh/known_hosts
-    - description: |
-        <description-of-the-command-here>
-      command: |
-        nvim ~/.zsh_history
-
-pbcopy:
-  description: |
-    pbcopy, pbpaste - provide copying and pasting to the pasteboard (the
-    Clipboard) from command line.
-  commands:
-    - description: |
-        <description-of-the-command-here>
-      command: |
-        pbcopy < ~/.ssh/id_rsa.pub && cat ~/.ssh/id_rsa.pub
-
-ping:
-  description: |
-    send ICMP ECHO_REQUEST packets to network hosts.
-  commands:
-    - description: |
-        <description-of-the-command-here>
-      command: |
-        ping google.com
-
-plumber:
-  description: |
-    plumber is a CLI devtool for inspecting, piping, messaging and redirecting
-    data in message systems like Kafka, RabbitMQ , GCP PubSub and many more.
-  commands:
-    - description: |
-        <description-of-the-command-here>
-      command: |
-        plumber read aws-sqs
-          -f
-          --queue-name=queue_name
-          --auto-delete
-          --aws-region=eu-central-1
-          --aws-access-key-id=AKIASFYAHAJW5NPOUYED
-          --aws-secret-access-key=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
-    - description: |
-        <description-of-the-command-here>
-      command: |
-        plumber read kafka
-          --topic migrations
-          --address="localhost:55001"
-          --follow
-          --json
-    - description: |
-        <description-of-the-command-here>
-      command: |
-        plumber write kafka
-          --address="localhost:55001"
-          --topic migrations
-          --input-data '{"hello":"world"}'
-
-rm:
-  description: |
-    remove directory entries.
-  commands:
-    - description: |
-        <description-of-the-command-here>
-      command: |
-        rm -Rf vendor
-    - description: |
-        <description-of-the-command-here>
-      command: |
-        rm -Rf node_modules
-
 screen:
   description: |
     screen manager with VT100/ANSI terminal emulation.
   commands:
     - description: |
-        <description-of-the-command-here>
+        open the screen of the docker vm.
       command: |
         screen ~/Library/Containers/com.docker.docker/Data/vms/0/tty
 
@@ -599,21 +931,20 @@ sh:
     supported shells.
   commands:
     - description: |
-        <description-of-the-command-here>
+        wait for the postgres database to be up and running.
       command: |
         sh -c "while ! nc -z postgres 5432; do sleep 0.1; done"
 
-sh:
+source:
   description: |
-    shell builtin commands are commands that can be executed within the running
-    shell's process.
+    Source the file argument.
   commands:
     - description: |
-        <description-of-the-command-here>
+        source the .env file.
       command: |
         source .env
     - description: |
-        <description-of-the-command-here>
+        source the .zshrc file.
       command: |
         source ~/.zshrc
 
@@ -625,38 +956,25 @@ ssh:
     network.
   commands:
     - description: |
-        <description-of-the-command-here>
+        add the ssh key to the keychain.
       command: |
         ssh-add --apple-use-keychain ~/.ssh/id_ed25519
     - description: |
-        <description-of-the-command-here>
+        generate a new ssh key with the ed25519 algorithm.
       command: |
         ssh-keygen -t ed25519 -C "jpcercal@gmail.com"
     - description: |
-        <description-of-the-command-here>
+        generate a new ssh key with the rsa algorithm.
       command: |
         ssh-keygen -t rsa -b 4096 -C "jpcercal@gmail.com"
     - description: |
-        <description-of-the-command-here>
+        start the ssh agent.
       command: |
         eval "$(ssh-agent -s)"
     - description: |
-        <description-of-the-command-here>
+        create the ~/.ssh/config file.
       command: |
         touch ~/.ssh/config
-
-lsof:
-  description: |
-    list open files.
-  commands:
-    - description: |
-        <description-of-the-command-here>
-      command: |
-        sudo lsof -i tcp:3000
-    - description: |
-        <description-of-the-command-here>
-      command: |
-        sudo lsof -i tcp:80
 
 tail:
   description: |
@@ -664,64 +982,9 @@ tail:
     input, to the standard output.
   commands:
     - description: |
-        <description-of-the-command-here>
+        print the last 30 lines of the ~/.zsh_history file.
       command: |
         tail -30 ~/.zsh_history
-
-uname:
-  description: |
-    the uname command writes the name of the operating system implementation to
-    standard output.  When options are specified, strings representing one or
-    more system characteristics are written to standard output.
-  commands:
-    - description: |
-        <description-of-the-command-here>
-      command: |
-        uname -a
-
-cd:
-  description: |
-    the cd command allows you to move between directories. The cd command takes
-    an argument, usually the name of the folder you want to move to, so the full
-    command is cd your-directory.
-  commands:
-    - description: |
-        <description-of-the-command-here>
-      command: |
-        cd ~/projects
-    - description: |
-        <description-of-the-command-here>
-      command: |
-        cd ~/dotfiles
-
-last:
-  description: |
-    indicate last logins of users and ttys.
-  commands:
-    - description: |
-        <description-of-the-command-here>
-      command: |
-        last reboot
-
-hostname:
-  description: |
-    set or print name of current host system.
-  commands:
-    - description: |
-        <description-of-the-command-here>
-      command: |
-        hostname
-
-brew:
-  description: |
-    homebrew is the easiest and most flexible way to install the UNIX tools
-    Apple didn't include with macOS. It can also install software not packaged
-    for your Linux distribution without requiring sudo.
-  commands:
-    - description: |
-        <description-of-the-command-here>
-      command: |
-        brew install --cask <cask-name>
 
 turbinekreuzberg:
   description: |
@@ -743,3 +1006,24 @@ turbinekreuzberg:
             -P $(cat ~/projects/turbine/turboshop/deploy.aws-env.yml | yq '.image.environment.AWS_SPRYKER_DB_PORT')
             -p$(cat ~/projects/turbine/turboshop/deploy.aws-env.yml | yq '.image.environment.AWS_SPRYKER_DB_ROOT_PASSWORD')
         "
+
+uname:
+  description: |
+    the uname command writes the name of the operating system implementation to
+    standard output.  When options are specified, strings representing one or
+    more system characteristics are written to standard output.
+  commands:
+    - description: |
+        print the name of the operating system implementation.
+      command: |
+        uname -a
+
+urlwatch:
+  description: |
+    urlwatch is intended to help you watch changes in webpages and get notified
+    (e.g., via email) of any changes.
+  commands:
+    - description: |
+        execute the urlwatch command with the configuration file and the jobs using the verbose flag.
+      command: |
+        urlwatch --config ~/dotfiles/urlwatch/aima/config.yaml --urls ~/dotfiles/urlwatch/aima/jobs.yaml --verbose
