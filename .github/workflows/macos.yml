@@ -47,14 +47,17 @@ jobs:
         - name: Checkout
           uses: actions/checkout@v3
 
+        - name: install software updates
+          run: make software_update
+
         - name: install dependencies
           run: make install_dependencies
+        
+        # - name: configure apps
+        #   run: make configure_apps
 
-        - name: configure apps
-          run: make configure_apps
-
-        - name: apply custom preferences
-          run: make apply_preferences
+        # - name: apply custom preferences
+        #   run: make apply_preferences
 
         - name: update history of executed commands
-          run: make update_history_commands
+          run: brew install zsh zsh-completions atuin && eval "$(atuin init zsh)" && make update_history_commands

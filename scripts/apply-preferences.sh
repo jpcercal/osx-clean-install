@@ -14,11 +14,8 @@ print::title_paragraph "This script will apply the personal preferences you like
 # ===========================================================================================
 # Add Login Items
 
-print::command "osascript -e 'tell application \"System Events\" to make login item at end with properties {path:\"/Applications/Dropbox.app\", hidden:true}'"
 print::command "osascript -e 'tell application \"System Events\" to make login item at end with properties {path:\"/Applications/Docker.app/\", hidden:true}'"
 print::command "osascript -e 'tell application \"System Events\" to make login item at end with properties {path:\"/Applications/Velja.app/\", hidden:true}'"
-print::command "osascript -e 'tell application \"System Events\" to make login item at end with properties {path:\"/Applications/Later.app/\", hidden:true}'"
-print::command "osascript -e 'tell application \"System Events\" to make login item at end with properties {path:\"/Applications/Hidden Bar.app/\", hidden:true}'"
 print::command "osascript -e 'tell application \"System Events\" to make login item at end with properties {path:\"/Applications/Macs Fan Control.app\", hidden:false}'"
 print::command "osascript -e 'tell application \"System Events\" to make login item at end with properties {path:\"/Applications/Alfred 5.app\", hidden:false}'"
 print::command "osascript -e 'tell application \"System Events\" to make login item at end with properties {path:\"/Applications/Magnet.app\", hidden:false}'"

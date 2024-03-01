@@ -19,4 +19,4 @@ echo "y" | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew
 
 print::command "(echo; echo 'eval \"$(/opt/homebrew/bin/brew shellenv)\"') >> /Users/jpcercal/.zprofile && eval \"$(/opt/homebrew/bin/brew shellenv)\"" "Adding homebrew to the \$PATH environment variable."
 print::command "brew update"
-print::command "brew install yq atuin"
+print::command "brew install yq"
