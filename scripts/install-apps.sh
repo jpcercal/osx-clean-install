@@ -51,22 +51,6 @@ done
 
 # ------------------------------------------------------------------------------
 
-print::section "Python"
-print::section_paragraph "Setting up python interpreter versions and installing python apps."
-
-for versionBase64Encoded in $(yq -r '.install.pyenv.versions .[] | @base64' apps.yaml); do
-    print::command "pyenv install $(echo ${versionBase64Encoded} | yq '. | @base64d')"
-done
-
-print::command "pyenv global $(yq -r '.install.pyenv.global.version' apps.yaml)"
-print::command "pip install --upgrade pip"
-
-for packageBase64Encoded in $(yq -r '.install.pyenv.global.pip .[] | @base64' apps.yaml); do
-    print::command "pip install $(echo ${packageBase64Encoded} | yq '. | @base64d')"
-done
-
-# ------------------------------------------------------------------------------
-
 print::section "Ruby Gems"
 print::section_paragraph "Installing local or remote ruby gems." 
 

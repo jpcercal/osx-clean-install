@@ -16,8 +16,9 @@ jobs:
           pattern: "*.sh"
           exclude: "./.git/*"
           check_all_files_with_shebangs: "false"
-  dotfiles:
-    name: dotfiles
+
+  software_update:
+    name: Software Update
     runs-on: macos-latest
     steps:
       - name: Checkout
@@ -26,14 +27,34 @@ jobs:
       - name: install software updates
         run: make software_update
 
-      - name: install dependencies
-        run: make install_dependencies
+  install:
+      name: Install Dependencies and Apps
+      runs-on: macos-latest
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v3
 
-      - name: install apps
-        run: make install_apps
+        - name: install dependencies
+          run: make install_dependencies
 
-      - name: configure apps
-        run: make configure_apps
+        - name: install apps
+          run: make install_apps
 
-      - name: apply custom preferences
-        run: make apply_preferences
+  config:
+      name: Install Dependencies and Apps
+      runs-on: macos-latest
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v3
+
+        - name: install dependencies
+          run: make install_dependencies
+
+        - name: configure apps
+          run: make configure_apps
+
+        - name: apply custom preferences
+          run: make apply_preferences
+
+        - name: update history of executed commands
+          run: make update_history_commands

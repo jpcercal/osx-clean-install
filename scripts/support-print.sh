@@ -113,7 +113,7 @@ print::command() {
     fi
 
     local start=`date +%s`
-    /bin/bash -c "${COMMAND}"
+    eval "${COMMAND}"
     local is_success=$?
 
     local end=`date +%s`

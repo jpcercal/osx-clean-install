@@ -1,4 +1,8 @@
-export PATH="/opt/homebrew/bin:~/dotfiles/bin:$PATH"
+
+###########################################################
+# homebrew
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 ###########################################################
 # flags
@@ -34,7 +38,7 @@ export LDFLAGS="-L$(brew --prefix ruby)/lib $LDFLAGS"
 # python
 
 export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 ###########################################################
