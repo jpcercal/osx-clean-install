@@ -19,6 +19,10 @@ configure_apps:
 apply_preferences:
 	./scripts/apply-preferences.sh
 
+.PHONY: update_history_commands
+update_history_commands:
+	./scripts/update-history-commands.sh
+
 .PHONY: default
 default: 
 	software_update
@@ -26,3 +30,4 @@ default:
 	install_apps
 	configure_apps
 	apply_preferences
+	update_history_commands

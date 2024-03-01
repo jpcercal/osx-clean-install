@@ -498,9 +498,9 @@ head:
     display first lines of a file.
   commands:
     - description: |
-        print the first 30 lines of the ~/.zsh_history file.
+        print the first 30 lines of the /etc/hosts file.
       command: |
-        head -30 ~/.zsh_history
+        head -30 /etc/hosts
 
 hostname:
   description: |
@@ -728,9 +728,9 @@ nvim:
       command: |
         nvim ~/.ssh/known_hosts
     - description: |
-        open the ~/.zsh_history file with nvim.
+        open the /etc/hosts file with nvim.
       command: |
-        nvim ~/.zsh_history
+        nvim /etc/hosts
 
 pbcopy:
   description: |
@@ -982,9 +982,9 @@ tail:
     input, to the standard output.
   commands:
     - description: |
-        print the last 30 lines of the ~/.zsh_history file.
+        print the last 30 lines of the /etc/hosts file.
       command: |
-        tail -30 ~/.zsh_history
+        tail -30 /etc/hosts
 
 turbinekreuzberg:
   description: |

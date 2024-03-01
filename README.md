@@ -9,5 +9,10 @@ If you liked this idea then please don't forget to give me a star. =]
 Yeah, that's really simple, just run the following on your terminal:
 
 ```bash
-make
+make software_update
+make install_dependencies
+make install_apps
+make configure_apps
+make apply_preferences
+make update_history_commands
 ```
