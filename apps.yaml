@@ -96,6 +96,7 @@ install:
       - "authy"
       - "brave-browser"
       - "discord"
+      - "displaylink"
       - "docker"
       - "firefox"
       - "font-3270-nerd-font"
