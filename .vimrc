@@ -21,10 +21,10 @@ call plug#end()
 " ============================================================================
 " => General settings
 
-let g:python2_host_prog = '/usr/local/bin/python'
-let g:python3_host_prog = '/usr/local/bin/python3'
+let g:python2_host_prog = "$(which python)"
+let g:python3_host_prog = "$(which python)"
 
-set number 
+set number
 set relativenumber
 
 let g:mapleader=","
@@ -117,7 +117,7 @@ let g:php_cs_fixer_verbose = 0                    " Return the output of command
 nnoremap <silent><leader>pcd :call PhpCsFixerFixDirectory()<CR>
 nnoremap <silent><leader>pcf :call PhpCsFixerFixFile()<CR>
 
-" Runs the tool automatically 
+" Runs the tool automatically
 autocmd BufWritePost *.php silent! call PhpCsFixerFixFile()
 
 " ============================================================================

@@ -2,11 +2,25 @@ name: MacOS Workflow
 on: [push]
 
 jobs:
+  golang:
+    name: Golang
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: '1.22.x'
+      - run: |
+          /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+          go mod tidy -v
+          go run main.go
+          cat commands.log
+
   # shellcheck:
   #   name: runner / shellcheck
   #   runs-on: ubuntu-latest
   #   steps:
-  #     - uses: actions/checkout@v1
+  #     - uses: actions/checkout@v4
   #     - name: shellcheck
   #       uses: reviewdog/action-shellcheck@v1
   #       with:
@@ -22,7 +36,7 @@ jobs:
   #   runs-on: macos-latest
   #   steps:
   #     - name: Checkout
-  #       uses: actions/checkout@v3
+  #       uses: actions/checkout@v4
 
   #     - name: install software updates
   #       run: make software_update
@@ -32,7 +46,7 @@ jobs:
   #     runs-on: macos-latest
   #     steps:
   #       - name: Checkout
-  #         uses: actions/checkout@v3
+  #         uses: actions/checkout@v4
 
   #       - name: install dependencies
   #         run: make install_dependencies
@@ -40,24 +54,24 @@ jobs:
   #       - name: install apps
   #         run: make install_apps
 
-  config:
-      name: Configure
-      runs-on: macos-latest
-      steps:
-        - name: Checkout
-          uses: actions/checkout@v3
+  # config:
+  #     name: Configure
+  #     runs-on: macos-latest
+  #     steps:
+  #       - name: Checkout
+  #         uses: actions/checkout@v4
 
-        - name: install software updates
-          run: make software_update
+  #       - name: install software updates
+  #         run: make software_update
 
-        - name: install dependencies
-          run: make install_dependencies
-        
-        # - name: configure apps
-        #   run: make configure_apps
+  #       - name: install dependencies
+  #         run: make install_dependencies
 
-        # - name: apply custom preferences
-        #   run: make apply_preferences
+  #       # - name: configure apps
+  #       #   run: make configure_apps
 
-        - name: update history of executed commands
-          run: brew install zsh zsh-completions atuin && eval "$(atuin init zsh)" && make update_history_commands
+  #       # - name: apply custom preferences
+  #       #   run: make apply_preferences
+
+  #       - name: update history of executed commands
+  #         run: brew install zsh zsh-completions atuin && eval "$(atuin init zsh)" && make update_history_commands
